@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8456BADD2CABFF9500FFF5A5 /* TVConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BADC2CABFF9500FFF5A5 /* TVConnectionView.swift */; };
+		8456BADF2CABFF9600FFF5A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8456BADE2CABFF9600FFF5A5 /* Assets.xcassets */; };
+		8456BAE22CABFF9600FFF5A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8456BAE12CABFF9600FFF5A5 /* Preview Assets.xcassets */; };
+		8456BAEC2CABFF9600FFF5A5 /* MovidleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BAEB2CABFF9600FFF5A5 /* MovidleTests.swift */; };
+		8456BAF62CABFF9700FFF5A5 /* MovidleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BAF52CABFF9700FFF5A5 /* MovidleUITests.swift */; };
+		8456BAF82CABFF9700FFF5A5 /* MovidleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BAF72CABFF9700FFF5A5 /* MovidleUITestsLaunchTests.swift */; };
+		8456BB052CAC057400FFF5A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB042CAC057400FFF5A5 /* AppDelegate.swift */; };
+		8456BB082CAC059500FFF5A5 /* GoogleCast in Frameworks */ = {isa = PBXBuildFile; productRef = 8456BB072CAC059500FFF5A5 /* GoogleCast */; };
+		8456BB0B2CAC059F00FFF5A5 /* VizbeeHomeOSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8456BB0A2CAC059F00FFF5A5 /* VizbeeHomeOSKit */; };
+		8456BB0E2CAC05AB00FFF5A5 /* VizbeeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8456BB0D2CAC05AB00FFF5A5 /* VizbeeKit */; };
+		8456BB162CAC063400FFF5A5 /* VizbeeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB122CAC063400FFF5A5 /* VizbeeWrapper.swift */; };
+		8456BB172CAC063400FFF5A5 /* MobileToTVMessager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB132CAC063400FFF5A5 /* MobileToTVMessager.swift */; };
+		8456BB182CAC063400FFF5A5 /* VizbeeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB142CAC063400FFF5A5 /* VizbeeAdapter.swift */; };
+		8456BB192CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB152CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift */; };
+		8456BB1B2CAC0B1900FFF5A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8456BAE82CABFF9600FFF5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8456BACF2CABFF9500FFF5A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8456BAD62CABFF9500FFF5A5;
+			remoteInfo = Movidle;
+		};
+		8456BAF22CABFF9700FFF5A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8456BACF2CABFF9500FFF5A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8456BAD62CABFF9500FFF5A5;
+			remoteInfo = Movidle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8456BAD72CABFF9500FFF5A5 /* Movidle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movidle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8456BADC2CABFF9500FFF5A5 /* TVConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVConnectionView.swift; sourceTree = "<group>"; };
+		8456BADE2CABFF9600FFF5A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8456BAE12CABFF9600FFF5A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8456BAE72CABFF9600FFF5A5 /* MovidleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovidleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8456BAEB2CABFF9600FFF5A5 /* MovidleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovidleTests.swift; sourceTree = "<group>"; };
+		8456BAF12CABFF9700FFF5A5 /* MovidleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovidleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8456BAF52CABFF9700FFF5A5 /* MovidleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovidleUITests.swift; sourceTree = "<group>"; };
+		8456BAF72CABFF9700FFF5A5 /* MovidleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovidleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8456BB042CAC057400FFF5A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8456BB122CAC063400FFF5A5 /* VizbeeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VizbeeWrapper.swift; sourceTree = "<group>"; };
+		8456BB132CAC063400FFF5A5 /* MobileToTVMessager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileToTVMessager.swift; sourceTree = "<group>"; };
+		8456BB142CAC063400FFF5A5 /* VizbeeAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VizbeeAdapter.swift; sourceTree = "<group>"; };
+		8456BB152CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAppVizbeeStyle.swift; sourceTree = "<group>"; };
+		8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		8456BB1C2CAC0D8E00FFF5A5 /* Movidle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Movidle.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8456BAD42CABFF9500FFF5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456BB082CAC059500FFF5A5 /* GoogleCast in Frameworks */,
+				8456BB0B2CAC059F00FFF5A5 /* VizbeeHomeOSKit in Frameworks */,
+				8456BB0E2CAC05AB00FFF5A5 /* VizbeeKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAE42CABFF9600FFF5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAEE2CABFF9700FFF5A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8456BACE2CABFF9500FFF5A5 = {
+			isa = PBXGroup;
+			children = (
+				8456BAD92CABFF9500FFF5A5 /* Movidle */,
+				8456BAEA2CABFF9600FFF5A5 /* MovidleTests */,
+				8456BAF42CABFF9700FFF5A5 /* MovidleUITests */,
+				8456BAD82CABFF9500FFF5A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8456BAD82CABFF9500FFF5A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8456BAD72CABFF9500FFF5A5 /* Movidle.app */,
+				8456BAE72CABFF9600FFF5A5 /* MovidleTests.xctest */,
+				8456BAF12CABFF9700FFF5A5 /* MovidleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8456BAD92CABFF9500FFF5A5 /* Movidle */ = {
+			isa = PBXGroup;
+			children = (
+				8456BB1C2CAC0D8E00FFF5A5 /* Movidle.entitlements */,
+				8456BB112CAC062B00FFF5A5 /* VizbeeIntegration */,
+				8456BADC2CABFF9500FFF5A5 /* TVConnectionView.swift */,
+				8456BADE2CABFF9600FFF5A5 /* Assets.xcassets */,
+				8456BAE02CABFF9600FFF5A5 /* Preview Content */,
+				8456BB042CAC057400FFF5A5 /* AppDelegate.swift */,
+				8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */,
+			);
+			path = Movidle;
+			sourceTree = "<group>";
+		};
+		8456BAE02CABFF9600FFF5A5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8456BAE12CABFF9600FFF5A5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8456BAEA2CABFF9600FFF5A5 /* MovidleTests */ = {
+			isa = PBXGroup;
+			children = (
+				8456BAEB2CABFF9600FFF5A5 /* MovidleTests.swift */,
+			);
+			path = MovidleTests;
+			sourceTree = "<group>";
+		};
+		8456BAF42CABFF9700FFF5A5 /* MovidleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8456BAF52CABFF9700FFF5A5 /* MovidleUITests.swift */,
+				8456BAF72CABFF9700FFF5A5 /* MovidleUITestsLaunchTests.swift */,
+			);
+			path = MovidleUITests;
+			sourceTree = "<group>";
+		};
+		8456BB112CAC062B00FFF5A5 /* VizbeeIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				8456BB152CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift */,
+				8456BB132CAC063400FFF5A5 /* MobileToTVMessager.swift */,
+				8456BB142CAC063400FFF5A5 /* VizbeeAdapter.swift */,
+				8456BB122CAC063400FFF5A5 /* VizbeeWrapper.swift */,
+			);
+			path = VizbeeIntegration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8456BAD62CABFF9500FFF5A5 /* Movidle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8456BAFB2CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "Movidle" */;
+			buildPhases = (
+				8456BAD32CABFF9500FFF5A5 /* Sources */,
+				8456BAD42CABFF9500FFF5A5 /* Frameworks */,
+				8456BAD52CABFF9500FFF5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Movidle;
+			packageProductDependencies = (
+				8456BB072CAC059500FFF5A5 /* GoogleCast */,
+				8456BB0A2CAC059F00FFF5A5 /* VizbeeHomeOSKit */,
+				8456BB0D2CAC05AB00FFF5A5 /* VizbeeKit */,
+			);
+			productName = Movidle;
+			productReference = 8456BAD72CABFF9500FFF5A5 /* Movidle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8456BAE62CABFF9600FFF5A5 /* MovidleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8456BAFE2CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "MovidleTests" */;
+			buildPhases = (
+				8456BAE32CABFF9600FFF5A5 /* Sources */,
+				8456BAE42CABFF9600FFF5A5 /* Frameworks */,
+				8456BAE52CABFF9600FFF5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8456BAE92CABFF9600FFF5A5 /* PBXTargetDependency */,
+			);
+			name = MovidleTests;
+			productName = MovidleTests;
+			productReference = 8456BAE72CABFF9600FFF5A5 /* MovidleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8456BAF02CABFF9700FFF5A5 /* MovidleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8456BB012CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "MovidleUITests" */;
+			buildPhases = (
+				8456BAED2CABFF9700FFF5A5 /* Sources */,
+				8456BAEE2CABFF9700FFF5A5 /* Frameworks */,
+				8456BAEF2CABFF9700FFF5A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8456BAF32CABFF9700FFF5A5 /* PBXTargetDependency */,
+			);
+			name = MovidleUITests;
+			productName = MovidleUITests;
+			productReference = 8456BAF12CABFF9700FFF5A5 /* MovidleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8456BACF2CABFF9500FFF5A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					8456BAD62CABFF9500FFF5A5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					8456BAE62CABFF9600FFF5A5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8456BAD62CABFF9500FFF5A5;
+					};
+					8456BAF02CABFF9700FFF5A5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 8456BAD62CABFF9500FFF5A5;
+					};
+				};
+			};
+			buildConfigurationList = 8456BAD22CABFF9500FFF5A5 /* Build configuration list for PBXProject "Movidle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8456BACE2CABFF9500FFF5A5;
+			packageReferences = (
+				8456BB062CAC059500FFF5A5 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */,
+				8456BB092CAC059F00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */,
+				8456BB0C2CAC05AB00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */,
+			);
+			productRefGroup = 8456BAD82CABFF9500FFF5A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8456BAD62CABFF9500FFF5A5 /* Movidle */,
+				8456BAE62CABFF9600FFF5A5 /* MovidleTests */,
+				8456BAF02CABFF9700FFF5A5 /* MovidleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8456BAD52CABFF9500FFF5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456BB1B2CAC0B1900FFF5A5 /* Launch Screen.storyboard in Resources */,
+				8456BAE22CABFF9600FFF5A5 /* Preview Assets.xcassets in Resources */,
+				8456BADF2CABFF9600FFF5A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAE52CABFF9600FFF5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAEF2CABFF9700FFF5A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8456BAD32CABFF9500FFF5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456BB162CAC063400FFF5A5 /* VizbeeWrapper.swift in Sources */,
+				8456BB052CAC057400FFF5A5 /* AppDelegate.swift in Sources */,
+				8456BB192CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift in Sources */,
+				8456BB172CAC063400FFF5A5 /* MobileToTVMessager.swift in Sources */,
+				8456BADD2CABFF9500FFF5A5 /* TVConnectionView.swift in Sources */,
+				8456BB182CAC063400FFF5A5 /* VizbeeAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAE32CABFF9600FFF5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456BAEC2CABFF9600FFF5A5 /* MovidleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8456BAED2CABFF9700FFF5A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456BAF62CABFF9700FFF5A5 /* MovidleUITests.swift in Sources */,
+				8456BAF82CABFF9700FFF5A5 /* MovidleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8456BAE92CABFF9600FFF5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8456BAD62CABFF9500FFF5A5 /* Movidle */;
+			targetProxy = 8456BAE82CABFF9600FFF5A5 /* PBXContainerItemProxy */;
+		};
+		8456BAF32CABFF9700FFF5A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8456BAD62CABFF9500FFF5A5 /* Movidle */;
+			targetProxy = 8456BAF22CABFF9700FFF5A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8456BAF92CABFF9700FFF5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8456BAFA2CABFF9700FFF5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8456BAFC2CABFF9700FFF5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Movidle/Movidle.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Movidle/Preview Content\"";
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.Movidle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8456BAFD2CABFF9700FFF5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Movidle/Movidle.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Movidle/Preview Content\"";
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.Movidle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8456BAFF2CABFF9700FFF5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.MovidleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movidle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movidle";
+			};
+			name = Debug;
+		};
+		8456BB002CABFF9700FFF5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.MovidleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Movidle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Movidle";
+			};
+			name = Release;
+		};
+		8456BB022CABFF9700FFF5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.MovidleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Movidle;
+			};
+			name = Debug;
+		};
+		8456BB032CABFF9700FFF5A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYPSU46Q2X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.vizbee.MovidleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Movidle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8456BAD22CABFF9500FFF5A5 /* Build configuration list for PBXProject "Movidle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8456BAF92CABFF9700FFF5A5 /* Debug */,
+				8456BAFA2CABFF9700FFF5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8456BAFB2CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "Movidle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8456BAFC2CABFF9700FFF5A5 /* Debug */,
+				8456BAFD2CABFF9700FFF5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8456BAFE2CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "MovidleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8456BAFF2CABFF9700FFF5A5 /* Debug */,
+				8456BB002CABFF9700FFF5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8456BB012CABFF9700FFF5A5 /* Build configuration list for PBXNativeTarget "MovidleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8456BB022CABFF9700FFF5A5 /* Debug */,
+				8456BB032CABFF9700FFF5A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8456BB062CAC059500FFF5A5 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/google-cast-sdk-m1.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.8.0;
+			};
+		};
+		8456BB092CAC059F00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-homeos-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+		8456BB0C2CAC05AB00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ClaspTV/vizbee-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8456BB072CAC059500FFF5A5 /* GoogleCast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8456BB062CAC059500FFF5A5 /* XCRemoteSwiftPackageReference "google-cast-sdk-m1" */;
+			productName = GoogleCast;
+		};
+		8456BB0A2CAC059F00FFF5A5 /* VizbeeHomeOSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8456BB092CAC059F00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-homeos-sdk" */;
+			productName = VizbeeHomeOSKit;
+		};
+		8456BB0D2CAC05AB00FFF5A5 /* VizbeeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8456BB0C2CAC05AB00FFF5A5 /* XCRemoteSwiftPackageReference "vizbee-ios-sdk" */;
+			productName = VizbeeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8456BACF2CABFF9500FFF5A5 /* Project object */;
+}
