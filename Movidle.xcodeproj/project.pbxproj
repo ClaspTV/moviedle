@@ -21,7 +21,14 @@
 		8456BB172CAC063400FFF5A5 /* MobileToTVMessager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB132CAC063400FFF5A5 /* MobileToTVMessager.swift */; };
 		8456BB182CAC063400FFF5A5 /* VizbeeAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB142CAC063400FFF5A5 /* VizbeeAdapter.swift */; };
 		8456BB192CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8456BB152CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift */; };
-		8456BB1B2CAC0B1900FFF5A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */; };
+		84C145432CB6C0990000F109 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C145422CB6C0990000F109 /* SplashScreen.swift */; };
+		84C145472CB6C4CE0000F109 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C145462CB6C4CE0000F109 /* Launch Screen.storyboard */; };
+		84C1454C2CB6CA960000F109 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1454B2CB6CA960000F109 /* Constants.swift */; };
+		84C1454D2CB6CB6B0000F109 /* FredokaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84C145492CB6C9EC0000F109 /* FredokaOne-Regular.ttf */; };
+		84C145502CB6D0330000F109 /* TVConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1454F2CB6D0330000F109 /* TVConnectionViewModel.swift */; };
+		84C145532CB6EA250000F109 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C145522CB6EA250000F109 /* UserDefaultsStorage.swift */; };
+		84C145562CB6F1670000F109 /* ConnectionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C145552CB6F1670000F109 /* ConnectionState.swift */; };
+		84C145582CB6F1C80000F109 /* TVConnectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C145572CB6F1C80000F109 /* TVConnectingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +63,16 @@
 		8456BB132CAC063400FFF5A5 /* MobileToTVMessager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileToTVMessager.swift; sourceTree = "<group>"; };
 		8456BB142CAC063400FFF5A5 /* VizbeeAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VizbeeAdapter.swift; sourceTree = "<group>"; };
 		8456BB152CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoAppVizbeeStyle.swift; sourceTree = "<group>"; };
-		8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		8456BB1C2CAC0D8E00FFF5A5 /* Movidle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Movidle.entitlements; sourceTree = "<group>"; };
+		84C145422CB6C0990000F109 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		84C145462CB6C4CE0000F109 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		84C145492CB6C9EC0000F109 /* FredokaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FredokaOne-Regular.ttf"; sourceTree = "<group>"; };
+		84C1454A2CB6CA200000F109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84C1454B2CB6CA960000F109 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84C1454F2CB6D0330000F109 /* TVConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVConnectionViewModel.swift; sourceTree = "<group>"; };
+		84C145522CB6EA250000F109 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
+		84C145552CB6F1670000F109 /* ConnectionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionState.swift; sourceTree = "<group>"; };
+		84C145572CB6F1C80000F109 /* TVConnectingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVConnectingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +126,19 @@
 		8456BAD92CABFF9500FFF5A5 /* Movidle */ = {
 			isa = PBXGroup;
 			children = (
+				84C145542CB6F1560000F109 /* Enums */,
+				84C145512CB6EA150000F109 /* Utils */,
+				84C1454E2CB6D01C0000F109 /* ViewModels */,
+				84C1454A2CB6CA200000F109 /* Info.plist */,
+				84C145482CB6C9E40000F109 /* Fonts */,
+				84C145412CB6C07E0000F109 /* Views */,
 				8456BB1C2CAC0D8E00FFF5A5 /* Movidle.entitlements */,
 				8456BB112CAC062B00FFF5A5 /* VizbeeIntegration */,
-				8456BADC2CABFF9500FFF5A5 /* TVConnectionView.swift */,
 				8456BADE2CABFF9600FFF5A5 /* Assets.xcassets */,
 				8456BAE02CABFF9600FFF5A5 /* Preview Content */,
 				8456BB042CAC057400FFF5A5 /* AppDelegate.swift */,
-				8456BB1A2CAC0B1900FFF5A5 /* Launch Screen.storyboard */,
+				84C145462CB6C4CE0000F109 /* Launch Screen.storyboard */,
+				84C1454B2CB6CA960000F109 /* Constants.swift */,
 			);
 			path = Movidle;
 			sourceTree = "<group>";
@@ -156,6 +177,48 @@
 				8456BB122CAC063400FFF5A5 /* VizbeeWrapper.swift */,
 			);
 			path = VizbeeIntegration;
+			sourceTree = "<group>";
+		};
+		84C145412CB6C07E0000F109 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8456BADC2CABFF9500FFF5A5 /* TVConnectionView.swift */,
+				84C145422CB6C0990000F109 /* SplashScreen.swift */,
+				84C145572CB6F1C80000F109 /* TVConnectingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84C145482CB6C9E40000F109 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84C145492CB6C9EC0000F109 /* FredokaOne-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		84C1454E2CB6D01C0000F109 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				84C1454F2CB6D0330000F109 /* TVConnectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		84C145512CB6EA150000F109 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				84C145522CB6EA250000F109 /* UserDefaultsStorage.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		84C145542CB6F1560000F109 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				84C145552CB6F1670000F109 /* ConnectionState.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +335,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8456BB1B2CAC0B1900FFF5A5 /* Launch Screen.storyboard in Resources */,
+				84C145472CB6C4CE0000F109 /* Launch Screen.storyboard in Resources */,
 				8456BAE22CABFF9600FFF5A5 /* Preview Assets.xcassets in Resources */,
 				8456BADF2CABFF9600FFF5A5 /* Assets.xcassets in Resources */,
+				84C1454D2CB6CB6B0000F109 /* FredokaOne-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,12 +363,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C145532CB6EA250000F109 /* UserDefaultsStorage.swift in Sources */,
 				8456BB162CAC063400FFF5A5 /* VizbeeWrapper.swift in Sources */,
 				8456BB052CAC057400FFF5A5 /* AppDelegate.swift in Sources */,
+				84C145432CB6C0990000F109 /* SplashScreen.swift in Sources */,
+				84C145562CB6F1670000F109 /* ConnectionState.swift in Sources */,
 				8456BB192CAC063400FFF5A5 /* DemoAppVizbeeStyle.swift in Sources */,
 				8456BB172CAC063400FFF5A5 /* MobileToTVMessager.swift in Sources */,
 				8456BADD2CABFF9500FFF5A5 /* TVConnectionView.swift in Sources */,
 				8456BB182CAC063400FFF5A5 /* VizbeeAdapter.swift in Sources */,
+				84C145502CB6D0330000F109 /* TVConnectionViewModel.swift in Sources */,
+				84C145582CB6F1C80000F109 /* TVConnectingView.swift in Sources */,
+				84C1454C2CB6CA960000F109 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,13 +542,14 @@
 				DEVELOPMENT_TEAM = AYPSU46Q2X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Movidle/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,13 +575,14 @@
 				DEVELOPMENT_TEAM = AYPSU46Q2X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Movidle/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.family-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -18,9 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-//        let castingViewModel = CastingViewModel()
-        let homeView = TVConnectionView()
-        window.rootViewController = UIHostingController(rootView: homeView)
+        let splashScreen = ContentView()
+        window.rootViewController = UIHostingController(rootView: splashScreen)
         self.window = window
         window.makeKeyAndVisible()
         

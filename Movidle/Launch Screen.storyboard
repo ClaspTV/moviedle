@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="GxK-j5-dk7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-a0-2oN">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GxK-j5-dk7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0da-iv-ZhV"/>
-                            <constraint firstAttribute="trailing" secondItem="GxK-j5-dk7" secondAttribute="trailing" id="CUs-l4-nUd"/>
-                            <constraint firstAttribute="bottom" secondItem="GxK-j5-dk7" secondAttribute="bottom" id="Gqr-Pv-Z0F"/>
-                            <constraint firstItem="GxK-j5-dk7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="bSc-u4-Wfn"/>
+                            <constraint firstAttribute="bottom" secondItem="Ygq-a0-2oN" secondAttribute="bottom" id="Agb-GA-MvV"/>
+                            <constraint firstItem="Ygq-a0-2oN" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="KFA-qY-h8O"/>
+                            <constraint firstItem="Ygq-a0-2oN" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="cLB-9S-ZnY"/>
+                            <constraint firstItem="Ygq-a0-2oN" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="eQq-56-uiN"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,6 +36,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="597.33331298828125" height="341.33334350585938"/>
+        <image name="splash" width="428" height="926"/>
     </resources>
 </document>
