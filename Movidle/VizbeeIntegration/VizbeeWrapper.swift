@@ -11,19 +11,23 @@ enum ConnectionState {
     case disconnected
 }
 
+struct ConnectedTVInfo{
+    var id = ""
+    var type = ""
+    var friendlyName = ""
+    var model = ""
+}
+
 class VizbeeWrapper: NSObject {
   
     @objc static let shared = VizbeeWrapper()
     var isSDKInitialized: Bool = false
   
-    @objc static let kVZBCastConnected = "vizbee.cast.connected"
-    static let kVZBCastDisconnected = "vizbee.cast.disconnected"
+    static let kVZBCastStateChanged = "vizbee.cast.state.changed"
+    static let kVZBCastState = "state"
     
     var isConnected = false
     var sessionManager: VZBSessionManager?
-//    private var vizbeeAnalyticsHandler: VizbeeAnalyticsHandler?
-    
-    @objc var mobileToTVMessager: MobileToTVMessager?
     
     private static let logTag = "VZBApp_VizbeeWrapper"
     
@@ -42,15 +46,11 @@ class VizbeeWrapper: NSObject {
         // options
         let options = VZBOptions()
         options.useVizbeeUIWindowAtLevel = .normal + 3
-        options.uiConfig = DemoAppVizbeeStyle.lightTheme
+        options.uiConfig = VizbeeStyle.lightTheme
         options.customMetricsAttributes = ["Key-1_Hel10": "Value-1", "Key-2_!#l0 L": "Value-2", "Key-3": "Value-3"]
         
         // init Vizbee SDK
         initVizbeeSDK(appId: appId, appAdapter: appAdapter, options: options)
-        
-        // init mobileToTVMessager
-        mobileToTVMessager = MobileToTVMessager()
-        mobileToTVMessager?.listenForTVConnectionState()
     }
     
     @objc func initVizbeeSDK(appId: String, appAdapter: VizbeeAdapter, options: VZBOptions) {
@@ -67,9 +67,6 @@ class VizbeeWrapper: NSObject {
             // setup session manager
             sessionManager = Vizbee.getSessionManager()
             addSessionStateDelegate(sessionDelegate: self)
-            
-            // init vizbee analytics
-//            vizbeeAnalyticsHandler = VizbeeAnalyticsHandler();
         }
     }
     
@@ -78,7 +75,7 @@ class VizbeeWrapper: NSObject {
         let vizbeeScreen = VizbeeWrapper.shared.sessionManager?.getCurrentSession()?.vizbeeScreen
         var connectedTVInfo = ConnectedTVInfo()
         connectedTVInfo.id = vizbeeScreen?.screenInfo?.deviceId ?? ""
-        connectedTVInfo.friendlyName = vizbeeScreen?.screenInfo?.friendlyName ?? ""
+        connectedTVInfo.friendlyName = vizbeeScreen?.screenInfo?.friendlyName ?? "TV"
         connectedTVInfo.model = vizbeeScreen?.screenInfo?.model ?? ""
         connectedTVInfo.type = vizbeeScreen?.screenType?.typeName ?? ""
         
@@ -115,9 +112,6 @@ extension VizbeeWrapper: VZBSessionStateDelegate {
         case VZBSessionState.connecting:
             
             onDisconnected()
-
-            // analytics handler
-//            vizbeeAnalyticsHandler?.onConnecting()
             
         case VZBSessionState.connected:
             
@@ -126,37 +120,17 @@ extension VizbeeWrapper: VZBSessionStateDelegate {
         default:
             isConnected = false
         }
+        // Broadcast - post cast connected notification
+        NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastStateChanged), object: nil, userInfo: [VizbeeWrapper.kVZBCastState: newState]);
     }
   
     func onConnected() {
-
         isConnected = true
-        
-        // listen for video status
-        addVideoStatusListener()
-
-        // Broadcast - post cast connected notification
-        NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastConnected), object: nil)
-        
-        // analytics handler
-        let screen = sessionManager?.getCurrentSession()?.vizbeeScreen
-//        vizbeeAnalyticsHandler?.onConnectedToScreen(screen: screen)
-        
-        // send(eventName: kVZBEventName, eventData: Dictionary())
     }
     
     func onDisconnected() {
-
         if (isConnected) {
-
             isConnected = false
-            removeVideoStatusListener()
-
-            // Broadcast - post cast connected notification
-            NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastDisconnected), object: nil)
-            
-            // analytics handler
-//            vizbeeAnalyticsHandler?.onDisconnect()
         }
     }
     
@@ -166,31 +140,5 @@ extension VizbeeWrapper: VZBSessionStateDelegate {
   
     func disconnectSession() {
         sessionManager?.disconnectSession()
-    }
-}
-
-// --------------------------------
-// MARK: - Video Status Management
-// --------------------------------
-extension VizbeeWrapper: VZBVideoStatusUpdateDelegate {
-    func addVideoStatusListener() {
-        sessionManager?.getCurrentSession()?.videoClient.addVideoStatusDelegate(self)
-    }
-
-    func removeVideoStatusListener() {
-        sessionManager?.getCurrentSession()?.videoClient.removeVideoStatusDelegate(self)
-    }
-
-    func onVideoStatusUpdate(_ videoStatus: VZBVideoStatus?) {
-        guard let videoStatus = videoStatus,
-              let _ = videoStatus.guid else { return }
-        
-        switch videoStatus.playerState {
-        case .started:
-//            vizbeeAnalyticsHandler?.onVideoStart(vzbVideoStatus: videoStatus)
-            break
-        default:
-            break
-        }
     }
 }

@@ -6,5 +6,14 @@
 	<array>
 		<string>FredokaOne-Regular.ttf</string>
 	</array>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_googlecast._tcp</string>
+		<string>_7620440E._googlecast._tcp</string>
+		<string>_amzn-wplay._tcp</string>
+		<string>_viziocast._tcp</string>
+	</array>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Movidle enables you to connect to tv on your home network.</string>
 </dict>
 </plist>

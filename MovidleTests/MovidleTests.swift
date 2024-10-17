@@ -2,7 +2,7 @@
 //  MovidleTests.swift
 //  MovidleTests
 //
-//  Created by Sidharth Datta on 01/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import XCTest

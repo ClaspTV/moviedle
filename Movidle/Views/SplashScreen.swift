@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import VizbeeKit
 
 struct SplashScreen: View {
     @State private var isAnimating = false
@@ -22,7 +23,7 @@ struct SplashScreen: View {
                     .opacity(opacity)
                     .rotationEffect(.degrees(isAnimating ? 360 : 0)).padding(.vertical,20)
                 
-                Text(Constants.appName)
+                Text(StaticText.appName)
                     .font(.custom(Constants.fontFamily, size: Constants.titleFontSize))
                     .foregroundColor(Constants.primaryColor)
                     .opacity(opacity)
@@ -38,29 +39,8 @@ struct SplashScreen: View {
     }
 }
 
-struct ContentView: View {
-    @State private var isShowingSplash = true
-    
-    var body: some View {
-        Group {
-            if isShowingSplash {
-                SplashScreen()
-            } else {
-                TVConnectionView()
-            }
-        }
-        .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                withAnimation {
-                    self.isShowingSplash = false
-                }
-            }
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
+struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SplashScreen()
     }
 }
