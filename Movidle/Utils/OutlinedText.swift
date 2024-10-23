@@ -2,7 +2,7 @@
 //  OutlinedText.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 14/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI

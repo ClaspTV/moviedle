@@ -2,7 +2,7 @@
 //  Screens.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 10/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import Foundation

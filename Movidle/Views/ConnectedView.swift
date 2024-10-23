@@ -2,7 +2,7 @@
 //  ConnectedView.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 10/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI
@@ -29,11 +29,25 @@ struct ConnectedView: View {
                     .foregroundColor(Constants.primaryColor)
                     .padding(.horizontal,40)
                 
+                VStack(alignment: .leading, spacing: 5) {
+                    StyledTextField(text: $viewModel.currentUsername, placeholder: StaticText.enterUsername, textLimit: 15)
+                        .padding(.horizontal, 80)
+                }
+                
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
+                        .foregroundColor(.red)
+                        .padding(.horizontal, 80)
+                }
+                
                 // Buttons
-                VStack(spacing: 10) {
+                HStack(spacing: 10) {
                     Button(action: {
-                        path.removeAll()
-                        path.append(.StartGameView)
+                        viewModel.createGame({
+                            path.removeAll()
+                            path.append(.StartGameView)
+                        })
                     }) {
                         Text(StaticText.createGame)
                             .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
@@ -42,13 +56,13 @@ struct ConnectedView: View {
                             .frame(height: 60)
                             .background(Constants.primaryColor)
                             .cornerRadius(30)
-                            .padding(.top,10)
-                            .padding(.horizontal,40)
+                            .padding(.trailing, 5)
                     }.buttonStyle(PressableButtonStyle())
                     
                     Button(action:{
                         path.removeAll()
                         path.append(.JoinGameView)
+                        viewModel.updateUserName()
                     }) {
                         Text(StaticText.joinGame)
                             .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
@@ -57,13 +71,19 @@ struct ConnectedView: View {
                             .frame(height: 60)
                             .background(Constants.primaryColor)
                             .cornerRadius(30)
-                            .padding(.horizontal,40)
+                            .padding(.leading, 5)
                     }
                     .buttonStyle(PressableButtonStyle())
                 }
-                .padding(.horizontal, 40)
+                .padding()
+                .disabled(!viewModel.isButtonEnabled())
+                .opacity(viewModel.isButtonEnabled() ? 1.0 : 0.5)
             }
-        }.navigationBarHidden(true)
+        }
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
+        .navigationBarHidden(true)
             .overlay(
                 Button(action: {
                     path.removeAll()
@@ -73,9 +93,9 @@ struct ConnectedView: View {
                         .foregroundColor(Constants.primaryColor)
                         .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
                 }
-                .buttonStyle(PressableButtonStyle())
-                .padding(.trailing, 30)
-                .padding(.top, 16),
+                    .buttonStyle(PressableButtonStyle())
+                    .padding(.trailing, 30)
+                    .padding(.top, 16),
                 alignment: .topTrailing
             )
     }
@@ -85,7 +105,7 @@ struct ConnectedView_Previews: PreviewProvider {
     
     static var previews: some View {
         ConnectedView(path: .constant([]),
-                viewModel: ConnectedViewModel()
-            )
+                      viewModel: ConnectedViewModel()
+        )
     }
 }

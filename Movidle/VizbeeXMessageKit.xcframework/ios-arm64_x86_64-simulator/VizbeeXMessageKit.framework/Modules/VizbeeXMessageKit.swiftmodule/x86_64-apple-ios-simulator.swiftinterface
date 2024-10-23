@@ -1,0 +1,106 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name VizbeeXMessageKit
+import Foundation
+import Swift
+import VizbeeKit
+@_exported import VizbeeXMessageKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class VizbeeX : ObjectiveC.NSObject {
+  @objc public var state: VizbeeXMessageKit.VZBXMessageState {
+    @objc get
+  }
+  @objc public var members: [VizbeeKit.VZBDevice] {
+    @objc get
+  }
+  @objc public func connect(connectionType: VizbeeXMessageKit.VZBXMessageConnectionType, namespace: Swift.String, onEvent: @escaping (_ event: VizbeeXMessageKit.VZBXMessageConnectionEvent, _ info: VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> Swift.Void)
+  @objc public func disconnect()
+  @objc public func send(message: VizbeeXMessageKit.VZBXMessage, onSuccess successCallback: @escaping (Swift.Bool, Any?) -> Swift.Void, onFailure failureCallback: @escaping (any Swift.Error) -> Swift.Void)
+  @objc public func receive(onReceive: @escaping (VizbeeXMessageKit.VZBXMessage) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum VZBLogActionTag : Swift.Int {
+  case actionConnect
+  case actionDisconnect
+  case actionReady
+  case actionNotReady
+  case actionSend
+  case actionReceive
+  case actionAddReceiver
+  case actionAddInternalReceiver
+  public var description: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class VZBXMessageConnectionEventInfo : ObjectiveC.NSObject {
+  @objc public var members: [VizbeeKit.VZBDevice]?
+  @objc public var device: VizbeeKit.VZBDevice?
+  @objc public var error: (any Swift.Error)?
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum VZBXMessageConnectionType : Swift.Int {
+  case unicast
+  case bicast
+  case broadcast
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class VZBXMessage : ObjectiveC.NSObject {
+  @objc final public let payload: [Swift.String : Any]
+  @objc final public let sender: VizbeeKit.VZBDevice?
+  @objc public static func create(payload: [Swift.String : Any]) -> VizbeeXMessageKit.VZBXMessage
+  @objc public static func createWithSender(payload: [Swift.String : Any], sender: VizbeeKit.VZBDevice?) -> VizbeeXMessageKit.VZBXMessage
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public enum VZBXMessageConnectionEvent : Swift.Int {
+  case ready
+  case deviceConnected
+  case deviceDisconnected
+  case notReady
+  case error
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum VZBXMessageState : Swift.Int {
+  case ready
+  case notReady
+  public func toString() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension VizbeeXMessageKit.VZBLogActionTag : Swift.Equatable {}
+extension VizbeeXMessageKit.VZBLogActionTag : Swift.Hashable {}
+extension VizbeeXMessageKit.VZBLogActionTag : Swift.RawRepresentable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionType : Swift.Equatable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionType : Swift.Hashable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionType : Swift.RawRepresentable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionEvent : Swift.Equatable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionEvent : Swift.Hashable {}
+extension VizbeeXMessageKit.VZBXMessageConnectionEvent : Swift.RawRepresentable {}
+extension VizbeeXMessageKit.VZBXMessageState : Swift.Equatable {}
+extension VizbeeXMessageKit.VZBXMessageState : Swift.Hashable {}
+extension VizbeeXMessageKit.VZBXMessageState : Swift.RawRepresentable {}

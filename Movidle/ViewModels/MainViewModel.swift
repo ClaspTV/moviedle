@@ -11,7 +11,8 @@ import VizbeeKit
 
 class MainViewModel: ObservableObject {
     @Published var vizbeeSessionState: VZBSessionState = VZBSessionState.noDeviceAvailable
-    
+    @Published var showGameViewFromRoute: Route? = nil
+
     private var stateChangeObserver: NSObjectProtocol?
     
     init() {
@@ -22,6 +23,15 @@ class MainViewModel: ObservableObject {
         ) { [weak self] notification in
             if let state = notification.userInfo?[VizbeeWrapper.kVZBCastState] as? VZBSessionState {
                 self?.vizbeeSessionState = state
+                switch state {
+                case .connected:
+                    VizbeeXWrapper.shared.connect(completion: nil)
+                case .notConnected:
+                    VizbeeXWrapper.shared.disconnect()
+                    self?.showGameViewFromRoute = nil
+                default:
+                    break
+                }
             }
         }
     }

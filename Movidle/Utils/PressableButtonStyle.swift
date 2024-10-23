@@ -2,7 +2,7 @@
 //  PressableButtonStyle.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 16/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI

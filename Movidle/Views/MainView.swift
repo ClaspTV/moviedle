@@ -2,7 +2,7 @@
 //  MainView.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 17/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI
@@ -23,28 +23,37 @@ struct MainView: View {
             
             if isShowingSplash {
                 SplashScreen()
+            }else if(viewModel.showGameViewFromRoute != nil){
+                GameView(showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                    viewModel:GameViewModel())
             }else{
-                NavigationStack(path: viewModel.vizbeeSessionState == .connected ?  $connectedViewPath: $connectionViewPath) {
+                NavigationStack(path: viewModel.vizbeeSessionState == .connected ? $connectedViewPath: $connectionViewPath) {
                     if(viewModel.vizbeeSessionState == .connected){
-                        ConnectedView(path: $connectedViewPath, viewModel: ConnectedViewModel())
-                            .navigationDestination(for: Route.self) { index in
+                        ConnectedView(path: $connectedViewPath,
+                                      viewModel: ConnectedViewModel())
+                        .navigationDestination(for: Route.self) { index in
+                            
+                            switch index {
                                 
-                                switch index {
-                                    
-                                case .JoinGameView:
-                                    JoinGameView(path: $connectedViewPath, viewModel: JoinGameViewModel())
-                                    
-                                case .StartGameView:
-                                    StartGameView(path: $connectedViewPath, viewModel: StartGameViewModel())
-                                    
-                                case .TVDisconnectView:
-                                    TVDisconnectView(path: $connectedViewPath,
-                                                     vizbeeSessionState:$viewModel.vizbeeSessionState, viewModel: TVDisconnectViewModel())
-                                    
-                                default:
-                                    EmptyView()
-                                }
+                            case .JoinGameView:
+                                JoinGameView(path: $connectedViewPath,
+                                             showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                                             viewModel: JoinGameViewModel())
+                                
+                            case .StartGameView:
+                                StartGameView(path: $connectedViewPath,
+                                              showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                                              viewModel: StartGameViewModel())
+                                
+                            case .TVDisconnectView:
+                                TVDisconnectView(path: $connectedViewPath,
+                                                 vizbeeSessionState:$viewModel.vizbeeSessionState,
+                                                 viewModel: TVDisconnectViewModel())
+                                
+                            default:
+                                EmptyView()
                             }
+                        }
                     }else{
                         TVConnectionView(path: $connectionViewPath, vizbeeSessionState: $viewModel.vizbeeSessionState)
                             .offset(x: tvConnectionOffset)
@@ -55,7 +64,8 @@ struct MainView: View {
                                 switch index {
                                     
                                 case .TVSelectionView:
-                                    TVSelectionView(path: $connectionViewPath, vizbeeSessionState: $viewModel.vizbeeSessionState, viewModel:TVSelectionViewModel())
+                                    TVSelectionView(path: $connectionViewPath, vizbeeSessionState: $viewModel.vizbeeSessionState,
+                                                    viewModel:TVSelectionViewModel())
                                     
                                 default:
                                     EmptyView()

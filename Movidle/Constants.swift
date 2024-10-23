@@ -43,5 +43,12 @@ struct StaticText{
     static let join = "Join"
     static let disconnect = "Disconnect"
     static let connectingTo = "Connecting to "
+    static let playingOn = "Playing on "
+    static let timeLeft = "Time Left"
+    static let typeYourGuess = "Type your guess..."
+    static let submit = "Submit"
+    static let yourScore = "Your Score"
+    static let waiting = "Waiting for other players to join..."
+    static let shareGameCode = "Join my Movidle game with code: "
 }
 

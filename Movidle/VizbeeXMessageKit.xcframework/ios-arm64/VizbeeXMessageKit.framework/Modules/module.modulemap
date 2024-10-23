@@ -1,0 +1,6 @@
+framework module VizbeeXMessageKit {
+  umbrella header "VizbeeXMessageKit.h"
+  export *
+
+  module * { export * }
+}

@@ -2,13 +2,14 @@
 //  JoinGameView.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 10/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI
 
 struct JoinGameView: View {
     @Binding var path: [Route]
+    @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: JoinGameViewModel
     
     @State private var isKeyboardVisible = false
@@ -26,11 +27,9 @@ struct JoinGameView: View {
                 Text(StaticText.enterJoinCode)
                     .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
                     .foregroundColor(Constants.primaryColor)
+                    .padding(.bottom, 40)
                 
-                StyledTextField(text: $viewModel.userName, placeholder: StaticText.enterUsername)
-                    .padding(.horizontal, 80)
-                
-                StyledTextField(text: $viewModel.joinCode, placeholder: StaticText.joinCode)
+                StyledTextField(text: $viewModel.joinCode, placeholder: StaticText.joinCode , textLimit: 4)
                     .padding(.horizontal, 80)
                 
                 if let errorMessage = viewModel.errorMessage {
@@ -39,7 +38,11 @@ struct JoinGameView: View {
                         .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
                 }
                 
-                Button(action: viewModel.joinGame) {
+                Button(action: {
+                    path.removeAll()
+                    showGameViewFromRoute = .JoinGameView
+                    viewModel.joinGame()
+                }) {
                     Text(StaticText.join)
                         .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
                         .foregroundColor(Constants.secondaryColor)
@@ -78,6 +81,6 @@ struct JoinGameView: View {
 
 struct JoinGameView_Previews: PreviewProvider {
     static var previews: some View {
-        JoinGameView(path: .constant([.JoinGameView]), viewModel: JoinGameViewModel())
+        JoinGameView(path: .constant([.JoinGameView]), showGameViewFromRoute: .constant(nil), viewModel: JoinGameViewModel())
     }
 }

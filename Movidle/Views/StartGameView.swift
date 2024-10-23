@@ -2,13 +2,14 @@
 //  StartGameView.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 10/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI
 
 struct StartGameView: View {
     @Binding var path: [Route]
+    @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: StartGameViewModel
 
     @Environment(\.presentationMode) var presentationMode
@@ -47,11 +48,13 @@ struct StartGameView: View {
                     .foregroundColor(Constants.primaryColor)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
+                    .padding(.bottom, 40)
                 
-                StyledTextField(text: $viewModel.userName, placeholder: StaticText.enterUsername)
-                    .padding(.horizontal, 80)
-                
-                Button(action: viewModel.startGame) {
+                Button(action: {
+                        // open start connection
+                        path.removeAll()
+                        showGameViewFromRoute = .StartGameView
+                }) {
                     Text(StaticText.startGame)
                         .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
                         .foregroundColor(Constants.secondaryColor)
@@ -63,8 +66,6 @@ struct StartGameView: View {
                 }
                 .buttonStyle(PressableButtonStyle())
                 .padding(.horizontal, 40)
-                .disabled(!viewModel.isStartGameButtonEnabled())
-                .opacity(viewModel.isStartGameButtonEnabled() ? 1.0 : 0.5)
             }
         }
         .navigationBarHidden(true)
@@ -75,7 +76,8 @@ struct StartGameView: View {
             .padding(.leading, 16)
             .padding(.top, 8),
             alignment: .topLeading
-        ).onTapGesture {
+        )
+        .onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
@@ -83,14 +85,15 @@ struct StartGameView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
             isKeyboardVisible = false
-        }.sheet(isPresented: $viewModel.isSharePresented) {
-            ShareSheet(activityItems: ["Join my Movidle game with code: \(viewModel.gameCode)"])
+        }
+        .sheet(isPresented: $viewModel.isSharePresented) {
+            ShareSheet(activityItems: [StaticText.shareGameCode + viewModel.gameCode])
         }
     }
 }
 
 struct StartGameView_Previews: PreviewProvider {
     static var previews: some View {
-        StartGameView(path: .constant([.StartGameView]), viewModel: StartGameViewModel())
+        StartGameView(path: .constant([.StartGameView]), showGameViewFromRoute: .constant(nil), viewModel: StartGameViewModel())
     }
 }

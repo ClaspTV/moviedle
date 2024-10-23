@@ -2,14 +2,15 @@
 //  JoinGameViewModel.swift
 //  Movidle
 //
-//  Created by Sidharth Datta on 14/10/24.
+//  Copyright © Vizbee Inc. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
 class JoinGameViewModel: ObservableObject {
-    @Published var userName: String = ""
+    
+    @Published var currentUsername: String = VizbeeXWrapper.shared.getUserName()
     @Published var joinCode: String = ""
     @Published var isJoinButtonEnabled: Bool = false
     @Published var errorMessage: String?
@@ -18,10 +19,11 @@ class JoinGameViewModel: ObservableObject {
     
     init() {
         setupPublishers()
+        print("username: ", currentUsername)
     }
     
     private func setupPublishers() {
-        Publishers.CombineLatest($userName, $joinCode)
+        Publishers.CombineLatest($currentUsername, $joinCode)
             .map { userName, joinCode in
                 return !userName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
                        !joinCode.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
@@ -30,24 +32,25 @@ class JoinGameViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
+    func createMessageParams() -> [String: Any] {
+        return [
+            "msgType": MessageType.joinGame.rawValue,
+            "joinCode": "movidle_" + joinCode
+        ]
+    }
+    
     func joinGame() {
-        // Here you would typically make an API call or perform some validation
-        // For this example, we'll just simulate a join process
-        
-        // Simulate API call
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            guard let self = self else { return }
-            
-            // Check if join code is valid (for example, must be 6 characters)
-            if self.joinCode.count != 6 {
-                self.errorMessage = "Invalid join code. Must be 6 characters."
-                return
+        //TODO: Handle wrong join code
+        VizbeeXWrapper.shared.connectBroadcast(namespace: "movidle_" + joinCode) { success, error in
+            if(success) {
+                VizbeeXWrapper.shared.send(message:self.createMessageParams(), on: .unicast) { success, error in
+                    if(!success) {
+                        //TODO: Handle failure
+                    }
+                }
+            }else{
+                //TODO: Handle failure
             }
-            
-            // If join is successful, you might want to navigate to the game screen
-            // or update some app state
-            print("Joined game successfully with username: \(self.userName) and code: \(self.joinCode)")
-            // Here you would typically call a method to start the game or navigate to the game screen
         }
     }
 }

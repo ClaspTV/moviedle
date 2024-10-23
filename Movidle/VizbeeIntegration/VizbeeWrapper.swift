@@ -38,7 +38,7 @@ class VizbeeWrapper: NSObject {
     @objc func initVizbeeSDK() {
         
         // appId
-        let appId =  "vzb2000001"
+        let appId =  "vzb7058786937"
         
         // app adapter
         let appAdapter = VizbeeAdapter()
