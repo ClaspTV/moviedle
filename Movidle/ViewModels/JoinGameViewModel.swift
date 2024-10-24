@@ -35,13 +35,13 @@ class JoinGameViewModel: ObservableObject {
     func createMessageParams() -> [String: Any] {
         return [
             "msgType": MessageType.joinGame.rawValue,
-            "joinCode": "movidle_" + joinCode
+            "joinCode": "movidle-" + joinCode
         ]
     }
     
     func joinGame() {
         //TODO: Handle wrong join code
-        VizbeeXWrapper.shared.connectBroadcast(namespace: "movidle_" + joinCode) { success, error in
+        VizbeeXWrapper.shared.connectBroadcast(namespace: "movidle-" + joinCode) { success, error in
             if(success) {
                 VizbeeXWrapper.shared.send(message:self.createMessageParams(), on: .unicast) { success, error in
                     if(!success) {

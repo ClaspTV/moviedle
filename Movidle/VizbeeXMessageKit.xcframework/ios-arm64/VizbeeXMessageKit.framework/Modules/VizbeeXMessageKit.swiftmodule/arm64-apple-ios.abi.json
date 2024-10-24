@@ -22,6 +22,1013 @@
         "moduleName": "VizbeeXMessageKit"
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageBaseImpl",
+        "printedName": "VZBXMessageBaseImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageState",
+                "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(py)state",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC5stateAA0D5StateOvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "state",
+            "declAttributes": [
+              "HasInitialValue",
+              "ObjC",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessageState",
+                    "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                    "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)state",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC5stateAA0D5StateOvg",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "objc_name": "state",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessageState",
+                    "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                    "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)setState:",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC5stateAA0D5StateOvs",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC5stateAA0D5StateOvM",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC5stateAA0D5StateOvM",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "members",
+            "printedName": "members",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VizbeeKit.VZBDevice]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBDevice",
+                    "printedName": "VizbeeKit.VZBDevice",
+                    "usr": "c:objc(cs)VZBDevice"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(py)members",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7membersSaySo9VZBDeviceCGvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "members",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VizbeeKit.VZBDevice]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBDevice",
+                        "printedName": "VizbeeKit.VZBDevice",
+                        "usr": "c:objc(cs)VZBDevice"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)members",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7membersSaySo9VZBDeviceCGvg",
+                "moduleName": "VizbeeXMessageKit",
+                "isOpen": true,
+                "objc_name": "members",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "namespace",
+            "printedName": "namespace",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvp",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvg",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvg",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvs",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvs",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvM",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9namespaceSSvM",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onEvent",
+            "printedName": "onEvent",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBXMessageConnectionEvent",
+                            "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                            "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBXMessageConnectionEventInfo",
+                            "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvp",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 2,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "VZBXMessageConnectionEvent",
+                                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "VZBXMessageConnectionEventInfo",
+                                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvg",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvg",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "VZBXMessageConnectionEvent",
+                                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "VZBXMessageConnectionEventInfo",
+                                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvs",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvs",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvM",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7onEventyAA0d10ConnectionH0O_AA0diH4InfoCtcSgvM",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "onReceive",
+            "printedName": "onReceive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((VizbeeXMessageKit.VZBXMessage) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessage",
+                        "printedName": "VizbeeXMessageKit.VZBXMessage",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvp",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage"
+            ],
+            "fixedbinaryorder": 3,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((VizbeeXMessageKit.VZBXMessage) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBXMessage",
+                            "printedName": "VizbeeXMessageKit.VZBXMessage",
+                            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvg",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvg",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "((VizbeeXMessageKit.VZBXMessage) -> ())?",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Void",
+                            "printedName": "()"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBXMessage",
+                            "printedName": "VizbeeXMessageKit.VZBXMessage",
+                            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvs",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvs",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvM",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC9onReceiveyAA0D0CcSgvM",
+                "moduleName": "VizbeeXMessageKit",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7connect14connectionType9namespace7onEventyAA0d10ConnectionI0O_SSyAA0dmL0O_AA0dmL4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "disconnect",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC4send7message9onSuccess0I7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(onReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessage",
+                    "printedName": "VizbeeXMessageKit.VZBXMessage",
+                    "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)receiveOnReceive:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC7receive9onReceiveyyAA0D0Cc_tF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "receiveOnReceive:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addInternalReceiver",
+            "printedName": "addInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC19addInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC19addInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeInternalReceiver",
+            "printedName": "removeInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC22removeInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC22removeInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPresenceCallback",
+            "printedName": "addPresenceCallback()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC19addPresenceCallbackyyF",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC19addPresenceCallbackyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removePresenceCallback",
+            "printedName": "removePresenceCallback()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit19VZBXMessageBaseImplC22removePresenceCallbackyyF",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC22removePresenceCallbackyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSessionStateChanged",
+            "printedName": "onSessionStateChanged(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBSessionState",
+                "printedName": "VizbeeKit.VZBSessionState",
+                "usr": "c:@E@VZBSessionState"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)onSessionStateChanged:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC21onSessionStateChangedyySo010VZBSessionI0VF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "onSessionStateChanged:",
+            "declAttributes": [
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageBaseImpl",
+                "printedName": "VizbeeXMessageKit.VZBXMessageBaseImpl",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl(im)init",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl",
+        "mangledName": "$s17VizbeeXMessageKit19VZBXMessageBaseImplC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -59,6 +1066,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(py)state",
             "mangledName": "$s17VizbeeXMessageKit0A1XC5stateAA16VZBXMessageStateOvp",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "state",
             "declAttributes": [
               "ObjC",
@@ -82,6 +1090,7 @@
                 "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)state",
                 "mangledName": "$s17VizbeeXMessageKit0A1XC5stateAA16VZBXMessageStateOvg",
                 "moduleName": "VizbeeXMessageKit",
+                "isOpen": true,
                 "objc_name": "state",
                 "declAttributes": [
                   "ObjC"
@@ -114,6 +1123,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(py)members",
             "mangledName": "$s17VizbeeXMessageKit0A1XC7membersSaySo9VZBDeviceCGvp",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "members",
             "declAttributes": [
               "ObjC",
@@ -144,6 +1154,7 @@
                 "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)members",
                 "mangledName": "$s17VizbeeXMessageKit0A1XC7membersSaySo9VZBDeviceCGvg",
                 "moduleName": "VizbeeXMessageKit",
+                "isOpen": true,
                 "objc_name": "members",
                 "declAttributes": [
                   "ObjC"
@@ -210,6 +1221,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)connectWithConnectionType:namespace:onEvent:",
             "mangledName": "$s17VizbeeXMessageKit0A1XC7connect14connectionType9namespace7onEventyAA021VZBXMessageConnectionF0O_SSyAA0jkI0O_AA0jkI4InfoCtctF",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "connectWithConnectionType:namespace:onEvent:",
             "declAttributes": [
               "ObjC",
@@ -233,6 +1245,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)disconnect",
             "mangledName": "$s17VizbeeXMessageKit0A1XC10disconnectyyF",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "disconnect",
             "declAttributes": [
               "ObjC",
@@ -317,6 +1330,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)sendWithMessage:onSuccess:onFailure:",
             "mangledName": "$s17VizbeeXMessageKit0A1XC4send7message9onSuccess0F7FailureyAA11VZBXMessageC_ySb_ypSgtcys5Error_pctF",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "sendWithMessage:onSuccess:onFailure:",
             "declAttributes": [
               "ObjC",
@@ -357,6 +1371,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX(im)receiveOnReceive:",
             "mangledName": "$s17VizbeeXMessageKit0A1XC7receive9onReceiveyyAA11VZBXMessageCc_tF",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "objc_name": "receiveOnReceive:",
             "declAttributes": [
               "ObjC",
@@ -395,6 +1410,7 @@
         "usr": "c:@M@VizbeeXMessageKit@objc(cs)VizbeeX",
         "mangledName": "$s17VizbeeXMessageKit0A1XC",
         "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -405,6 +1421,13 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -971,6 +1994,131 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageFactory",
+        "printedName": "VZBXMessageFactory",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "create",
+            "printedName": "create(connectionType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit18VZBXMessageFactoryC6create14connectionTypeAA0D8Delegate_pAA0d10ConnectionH0O_tFZ",
+            "mangledName": "$s17VizbeeXMessageKit18VZBXMessageFactoryC6create14connectionTypeAA0D8Delegate_pAA0d10ConnectionH0O_tFZ",
+            "moduleName": "VizbeeXMessageKit",
+            "static": true,
+            "declAttributes": [
+              "Final"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageFactory",
+                "printedName": "VizbeeXMessageKit.VZBXMessageFactory",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageFactory"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageFactory(im)init",
+            "mangledName": "$s17VizbeeXMessageKit18VZBXMessageFactoryCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageFactory",
+        "mangledName": "$s17VizbeeXMessageKit18VZBXMessageFactoryC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1024,6 +2172,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo(py)members",
             "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC7membersSaySo9VZBDeviceCGSgvp",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
@@ -1065,6 +2214,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC7membersSaySo9VZBDeviceCGSgvg",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1108,6 +2258,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC7membersSaySo9VZBDeviceCGSgvs",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1129,6 +2280,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC7membersSaySo9VZBDeviceCGSgvM",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -1157,6 +2309,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo(py)device",
             "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC6deviceSo9VZBDeviceCSgvp",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
@@ -1190,6 +2343,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC6deviceSo9VZBDeviceCSgvg",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1225,6 +2379,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC6deviceSo9VZBDeviceCSgvs",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1246,6 +2401,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC6deviceSo9VZBDeviceCSgvM",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -1274,6 +2430,7 @@
             "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo(py)error",
             "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC5errors5Error_pSgvp",
             "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
             "declAttributes": [
               "HasInitialValue",
               "HasStorage",
@@ -1307,6 +2464,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC5errors5Error_pSgvg",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1342,6 +2500,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC5errors5Error_pSgvs",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "declAttributes": [
                   "ObjC"
                 ],
@@ -1363,6 +2522,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC5errors5Error_pSgvM",
                 "moduleName": "VizbeeXMessageKit",
                 "implicit": true,
+                "isOpen": true,
                 "accessorKind": "_modify"
               }
             ]
@@ -1384,6 +2544,7 @@
             "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC11descriptionSSvp",
             "moduleName": "VizbeeXMessageKit",
             "overriding": true,
+            "isOpen": true,
             "objc_name": "description",
             "declAttributes": [
               "Dynamic",
@@ -1409,6 +2570,7 @@
                 "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC11descriptionSSvg",
                 "moduleName": "VizbeeXMessageKit",
                 "overriding": true,
+                "isOpen": true,
                 "objc_name": "description",
                 "declAttributes": [
                   "Dynamic",
@@ -1449,6 +2611,7 @@
         "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo",
         "mangledName": "$s17VizbeeXMessageKit30VZBXMessageConnectionEventInfoC",
         "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -1780,6 +2943,216 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageNamespaceValidatorImplExtension",
+        "printedName": "VZBXMessageNamespaceValidatorImplExtension",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "privateNamespaces",
+            "printedName": "privateNamespaces",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.String>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC17privateNamespaces33_0D987691D43C95244BB0564900D9D655LLShySSGvp",
+            "mangledName": "$s17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC17privateNamespaces33_0D987691D43C95244BB0564900D9D655LLShySSGvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageNamespaceValidatorImplExtension(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC7connect14connectionType9namespace7onEventyAA0d10ConnectionK0O_SSyAA0doN0O_AA0doN4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(extendedVZBX:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageNamespaceValidatorImplExtension",
+                "printedName": "VizbeeXMessageKit.VZBXMessageNamespaceValidatorImplExtension",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageNamespaceValidatorImplExtension"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "mangledName": "$s17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageNamespaceValidatorImplExtension",
+        "mangledName": "$s17VizbeeXMessageKit42VZBXMessageNamespaceValidatorImplExtensionC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImplExtension",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1797,6 +3170,480 @@
         "moduleName": "VizbeeXMessageKit"
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageBaseImplExtension",
+        "printedName": "VZBXMessageBaseImplExtension",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "extendedVZBX",
+            "printedName": "extendedVZBX",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC12extendedVZBX33_A147159E3D46017CC58658E0AB6358C1LLAA0D8Delegate_pvp",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC12extendedVZBX33_A147159E3D46017CC58658E0AB6358C1LLAA0D8Delegate_pvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasStorage",
+              "Final",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "isLet": true,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(extendedVZBX:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageBaseImplExtension",
+                "printedName": "VizbeeXMessageKit.VZBXMessageBaseImplExtension",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "moduleName": "VizbeeXMessageKit",
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageState",
+                "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(py)state",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC5stateAA0D5StateOvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "state",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessageState",
+                    "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                    "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)state",
+                "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC5stateAA0D5StateOvg",
+                "moduleName": "VizbeeXMessageKit",
+                "isOpen": true,
+                "objc_name": "state",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "members",
+            "printedName": "members",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VizbeeKit.VZBDevice]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBDevice",
+                    "printedName": "VizbeeKit.VZBDevice",
+                    "usr": "c:objc(cs)VZBDevice"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(py)members",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC7membersSaySo9VZBDeviceCGvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "members",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VizbeeKit.VZBDevice]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBDevice",
+                        "printedName": "VizbeeKit.VZBDevice",
+                        "usr": "c:objc(cs)VZBDevice"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)members",
+                "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC7membersSaySo9VZBDeviceCGvg",
+                "moduleName": "VizbeeXMessageKit",
+                "isOpen": true,
+                "objc_name": "members",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC7connect14connectionType9namespace7onEventyAA0d10ConnectionJ0O_SSyAA0dnM0O_AA0dnM4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "disconnect",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC4send7message9onSuccess0J7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(onReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessage",
+                    "printedName": "VizbeeXMessageKit.VZBXMessage",
+                    "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)receiveOnReceive:",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC7receive9onReceiveyyAA0D0Cc_tF",
+            "moduleName": "VizbeeXMessageKit",
+            "isOpen": true,
+            "objc_name": "receiveOnReceive:",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageBaseImplExtension",
+                "printedName": "VizbeeXMessageKit.VZBXMessageBaseImplExtension",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension(im)init",
+            "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension",
+        "mangledName": "$s17VizbeeXMessageKit28VZBXMessageBaseImplExtensionC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -1804,6 +3651,333 @@
         "moduleName": "VizbeeXMessageKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageLoggingImplExtension",
+        "printedName": "VZBXMessageLoggingImplExtension",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC7connect14connectionType9namespace7onEventyAA0d10ConnectionJ0O_SSyAA0dnM0O_AA0dnM4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "disconnect",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC4send7message9onSuccess0J7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(onReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessage",
+                    "printedName": "VizbeeXMessageKit.VZBXMessage",
+                    "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension(im)receiveOnReceive:",
+            "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC7receive9onReceiveyyAA0D0Cc_tF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "receiveOnReceive:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(extendedVZBX:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageLoggingImplExtension",
+                "printedName": "VizbeeXMessageKit.VZBXMessageLoggingImplExtension",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageLoggingImplExtension",
+        "mangledName": "$s17VizbeeXMessageKit31VZBXMessageLoggingImplExtensionC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImplExtension",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -2089,6 +4263,7 @@
             "mangledName": "$s17VizbeeXMessageKit11VZBXMessageC11descriptionSSvp",
             "moduleName": "VizbeeXMessageKit",
             "overriding": true,
+            "isOpen": true,
             "objc_name": "description",
             "declAttributes": [
               "Dynamic",
@@ -2114,6 +4289,7 @@
                 "mangledName": "$s17VizbeeXMessageKit11VZBXMessageC11descriptionSSvg",
                 "moduleName": "VizbeeXMessageKit",
                 "overriding": true,
+                "isOpen": true,
                 "objc_name": "description",
                 "declAttributes": [
                   "Dynamic",
@@ -2154,6 +4330,7 @@
         "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage",
         "mangledName": "$s17VizbeeXMessageKit11VZBXMessageC",
         "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -2233,6 +4410,111 @@
         "moduleName": "VizbeeXMessageKit"
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageBicastImpl",
+        "printedName": "VZBXMessageBicastImpl",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageBicastImpl",
+                "printedName": "VizbeeXMessageKit.VZBXMessageBicastImpl",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBicastImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBicastImpl(im)init",
+            "mangledName": "$s17VizbeeXMessageKit21VZBXMessageBicastImplCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBicastImpl",
+        "mangledName": "$s17VizbeeXMessageKit21VZBXMessageBicastImplC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImpl",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -2248,6 +4530,353 @@
         "printedName": "VizbeeKit",
         "declKind": "Import",
         "moduleName": "VizbeeXMessageKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageDelegate",
+        "printedName": "VZBXMessageDelegate",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "state",
+            "printedName": "state",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageState",
+                "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(py)state",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP5stateAA0D5StateOvp",
+            "moduleName": "VizbeeXMessageKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessageState",
+                    "printedName": "VizbeeXMessageKit.VZBXMessageState",
+                    "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageState"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)state",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP5stateAA0D5StateOvg",
+                "moduleName": "VizbeeXMessageKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+                "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "members",
+            "printedName": "members",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VizbeeKit.VZBDevice]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBDevice",
+                    "printedName": "VizbeeKit.VZBDevice",
+                    "usr": "c:objc(cs)VZBDevice"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(py)members",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP7membersSaySo9VZBDeviceCGvp",
+            "moduleName": "VizbeeXMessageKit",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VizbeeKit.VZBDevice]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBDevice",
+                        "printedName": "VizbeeKit.VZBDevice",
+                        "usr": "c:objc(cs)VZBDevice"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)members",
+                "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP7membersSaySo9VZBDeviceCGvg",
+                "moduleName": "VizbeeXMessageKit",
+                "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+                "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP7connect14connectionType9namespace7onEventyAA0d10ConnectionH0O_SSyAA0dlK0O_AA0dlK4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP4send7message9onSuccess0H7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "receive",
+            "printedName": "receive(onReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessage) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBXMessage",
+                    "printedName": "VizbeeXMessageKit.VZBXMessage",
+                    "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate(im)receiveOnReceive:",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP7receive9onReceiveyyAA0D0Cc_tF",
+            "moduleName": "VizbeeXMessageKit",
+            "genericSig": "<τ_0_0 where τ_0_0 : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "sugared_genericSig": "<Self where Self : VizbeeXMessageKit.VZBXMessageDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+        "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP",
+        "moduleName": "VizbeeXMessageKit",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "ObjC"
+        ]
       },
       {
         "kind": "Import",
@@ -2847,6 +5476,406 @@
         "moduleName": "VizbeeXMessageKit"
       },
       {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageBroadcastImpl",
+        "printedName": "VZBXMessageBroadcastImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "internalOnReceive",
+            "printedName": "internalOnReceive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([Swift.AnyHashable : Any], VizbeeKit.VZBDevice) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.AnyHashable : Any], VizbeeKit.VZBDevice) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "([Swift.AnyHashable : Any], VizbeeKit.VZBDevice)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBDevice",
+                            "printedName": "VizbeeKit.VZBDevice",
+                            "usr": "c:objc(cs)VZBDevice"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit24VZBXMessageBroadcastImplC17internalOnReceive33_7009F4BB7372DEC3C0391016EE11E74DLLySDys11AnyHashableVypG_So9VZBDeviceCtcSgvp",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC17internalOnReceive33_7009F4BB7372DEC3C0391016EE11E74DLLySDys11AnyHashableVypG_So9VZBDeviceCtcSgvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC7connect14connectionType9namespace7onEventyAA0d10ConnectionI0O_SSyAA0dmL0O_AA0dmL4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "disconnect",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC4send7message9onSuccess0I7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addInternalReceiver",
+            "printedName": "addInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit24VZBXMessageBroadcastImplC19addInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC19addInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeInternalReceiver",
+            "printedName": "removeInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit24VZBXMessageBroadcastImplC22removeInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC22removeInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageBroadcastImpl",
+                "printedName": "VizbeeXMessageKit.VZBXMessageBroadcastImpl",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl(im)init",
+            "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBroadcastImpl",
+        "mangledName": "$s17VizbeeXMessageKit24VZBXMessageBroadcastImplC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImpl",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -2854,6 +5883,200 @@
         "moduleName": "VizbeeXMessageKit",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageStateValidatorImplExtension",
+        "printedName": "VZBXMessageStateValidatorImplExtension",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageStateValidatorImplExtension(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit38VZBXMessageStateValidatorImplExtensionC4send7message9onSuccess0K7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(extendedVZBX:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageStateValidatorImplExtension",
+                "printedName": "VizbeeXMessageKit.VZBXMessageStateValidatorImplExtension",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageStateValidatorImplExtension"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageDelegate",
+                "printedName": "any VizbeeXMessageKit.VZBXMessageDelegate",
+                "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17VizbeeXMessageKit38VZBXMessageStateValidatorImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "mangledName": "$s17VizbeeXMessageKit38VZBXMessageStateValidatorImplExtensionC12extendedVZBXAcA0D8Delegate_p_tcfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "implicit": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageStateValidatorImplExtension",
+        "mangledName": "$s17VizbeeXMessageKit38VZBXMessageStateValidatorImplExtensionC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImplExtension",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImplExtension",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -2872,6 +6095,520 @@
         "printedName": "VizbeeKit",
         "declKind": "Import",
         "moduleName": "VizbeeXMessageKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "VZBXMessageUnicastImpl",
+        "printedName": "VZBXMessageUnicastImpl",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "members",
+            "printedName": "members",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[VizbeeKit.VZBDevice]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VZBDevice",
+                    "printedName": "VizbeeKit.VZBDevice",
+                    "usr": "c:objc(cs)VZBDevice"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(py)members",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC7membersSaySo9VZBDeviceCGvp",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "members",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[VizbeeKit.VZBDevice]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBDevice",
+                        "printedName": "VizbeeKit.VZBDevice",
+                        "usr": "c:objc(cs)VZBDevice"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(im)members",
+                "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC7membersSaySo9VZBDeviceCGvg",
+                "moduleName": "VizbeeXMessageKit",
+                "overriding": true,
+                "isOpen": true,
+                "objc_name": "members",
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "internalOnReceive",
+            "printedName": "internalOnReceive",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([Swift.AnyHashable : Any], Swift.String, VizbeeKit.VZBDevice) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Swift.AnyHashable : Any], Swift.String, VizbeeKit.VZBDevice) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "([Swift.AnyHashable : Any], Swift.String, VizbeeKit.VZBDevice)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Dictionary",
+                            "printedName": "[Swift.AnyHashable : Any]",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "AnyHashable",
+                                "printedName": "Swift.AnyHashable",
+                                "usr": "s:s11AnyHashableV"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "ProtocolComposition",
+                                "printedName": "Any"
+                              }
+                            ],
+                            "usr": "s:SD"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "VZBDevice",
+                            "printedName": "VizbeeKit.VZBDevice",
+                            "usr": "c:objc(cs)VZBDevice"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17VizbeeXMessageKit22VZBXMessageUnicastImplC17internalOnReceive33_7BA1FEEF425F51A2B73F1CDDAE9A3D72LLySDys11AnyHashableVypG_SSSo9VZBDeviceCtcSgvp",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC17internalOnReceive33_7BA1FEEF425F51A2B73F1CDDAE9A3D72LLySDys11AnyHashableVypG_SSSo9VZBDeviceCtcSgvp",
+            "moduleName": "VizbeeXMessageKit",
+            "isInternal": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "fixedbinaryorder": 0,
+            "hasStorage": true
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageUnicastImpl",
+                "printedName": "VizbeeXMessageKit.VZBXMessageUnicastImpl",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(im)init",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplCACycfc",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "connect",
+            "printedName": "connect(connectionType:namespace:onEvent:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessageConnectionType",
+                "printedName": "VizbeeXMessageKit.VZBXMessageConnectionType",
+                "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionType"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(VizbeeXMessageKit.VZBXMessageConnectionEvent, VizbeeXMessageKit.VZBXMessageConnectionEventInfo)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEvent",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEvent",
+                        "usr": "c:@M@VizbeeXMessageKit@E@VZBXMessageConnectionEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VZBXMessageConnectionEventInfo",
+                        "printedName": "VizbeeXMessageKit.VZBXMessageConnectionEventInfo",
+                        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageConnectionEventInfo"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(im)connectWithConnectionType:namespace:onEvent:",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC7connect14connectionType9namespace7onEventyAA0d10ConnectionI0O_SSyAA0dmL0O_AA0dmL4InfoCtctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "connectWithConnectionType:namespace:onEvent:",
+            "declAttributes": [
+              "ObjC",
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disconnect",
+            "printedName": "disconnect()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(im)disconnect",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC10disconnectyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "disconnect",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "send",
+            "printedName": "send(message:onSuccess:onFailure:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "VZBXMessage",
+                "printedName": "VizbeeXMessageKit.VZBXMessage",
+                "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessage"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Bool, Any?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Swift.Bool, Any?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(any Swift.Error) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "any Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl(im)sendWithMessage:onSuccess:onFailure:",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC4send7message9onSuccess0I7FailureyAA0D0C_ySb_ypSgtcys5Error_pctF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "objc_name": "sendWithMessage:onSuccess:onFailure:",
+            "declAttributes": [
+              "ObjC",
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addInternalReceiver",
+            "printedName": "addInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit22VZBXMessageUnicastImplC19addInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC19addInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeInternalReceiver",
+            "printedName": "removeInternalReceiver()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit22VZBXMessageUnicastImplC22removeInternalReceiveryyF",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC22removeInternalReceiveryyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addPresenceCallback",
+            "printedName": "addPresenceCallback()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit22VZBXMessageUnicastImplC19addPresenceCallbackyyF",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC19addPresenceCallbackyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removePresenceCallback",
+            "printedName": "removePresenceCallback()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17VizbeeXMessageKit22VZBXMessageUnicastImplC22removePresenceCallbackyyF",
+            "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC22removePresenceCallbackyyF",
+            "moduleName": "VizbeeXMessageKit",
+            "overriding": true,
+            "isOpen": true,
+            "declAttributes": [
+              "Override"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageUnicastImpl",
+        "mangledName": "$s17VizbeeXMessageKit22VZBXMessageUnicastImplC",
+        "moduleName": "VizbeeXMessageKit",
+        "isOpen": true,
+        "declAttributes": [
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@VizbeeXMessageKit@objc(cs)VZBXMessageBaseImpl",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "VizbeeXMessageKit.VZBXMessageBaseImpl",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "VZBXMessageDelegate",
+            "printedName": "VZBXMessageDelegate",
+            "usr": "c:@M@VizbeeXMessageKit@objc(pl)VZBXMessageDelegate",
+            "mangledName": "$s17VizbeeXMessageKit19VZBXMessageDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
       }
     ],
     "json_format_version": 8

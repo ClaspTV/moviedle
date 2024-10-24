@@ -102,6 +102,8 @@ struct GameStatusPayload: Codable {
     let status: GameStatusType
     let movieName: String
     let clipId: String
+    let movieNumber: Int
+    let totalMovies: Int
     let clipNumber: Int
     let totalClips: Int
     let clipScore: Int
@@ -112,17 +114,18 @@ struct GameStatusPayload: Codable {
               msgType == .gameStatus,
               let statusString = dictionary["status"] as? String,
               let status = GameStatusType(rawValue: statusString),
-              let movieName = dictionary["movieName"] as? String,
-              let clipId = dictionary["clipId"] as? String else {
-            return nil
+              let movieName = dictionary["movieName"] as? String else {
+              return nil
         }
         
         self.msgType = msgType
         self.status = status
         self.movieName = movieName
-        self.clipId = clipId
-        self.totalClips = dictionary["totalClips"] as? Int ?? 0
-        self.clipNumber = dictionary["clipNumber"] as? Int ?? 0
+        self.clipId = dictionary["clipId"] as? String ?? ""
+        self.movieNumber = dictionary["movieNumber"] as? Int ?? 1
+        self.totalMovies = dictionary["totalMovies"] as? Int ?? 1
+        self.clipNumber = dictionary["clipNumber"] as? Int ?? 1
+        self.totalClips = dictionary["totalClips"] as? Int ?? 1
         
         // Handle clipScore which might come as String or Int
         if let scoreString = dictionary["clipScore"] as? String {

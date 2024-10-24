@@ -10,11 +10,12 @@ import VizbeeHomeOSKit
 import VizbeeKit
 
 struct TVSelectionView: View {
-    @Binding var path: [Route]
+    @Binding var activeRoute: Route?
     @Binding var vizbeeSessionState: VZBSessionState
     @ObservedObject var viewModel: TVSelectionViewModel
     @State private var selectedDeviceId: String?
     @State private var selectedDeviceName: String?
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         ZStack {
@@ -22,7 +23,7 @@ struct TVSelectionView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 20) {
-                if viewModel.devices.isEmpty {
+                if viewModel.homeDevices.isEmpty {
                     noDevicesFoundView
                 } else {
                     VStack {
@@ -31,24 +32,24 @@ struct TVSelectionView: View {
                             .foregroundColor(Constants.primaryColor)
                             .padding(.vertical, 40)
                         
-                        ForEach(viewModel.devices, id: \.id) { device in
+                        ForEach(viewModel.homeDevices, id: \.deviceId) { device in
                             DeviceButton(
-                                                            device: device,
-                                                            isSelected: selectedDeviceId == device.id,
-                                                            isConnecting: vizbeeSessionState == .connecting,
-                                                            action: { selectDevice(device) }
-                                                        )
+                                device: device,
+                                isSelected: selectedDeviceId == device.deviceId,
+                                isConnecting: vizbeeSessionState == .connecting,
+                                action: { selectDevice(device) }
+                            )
                         }
                     }
                 }
                 
-                if !viewModel.devices.isEmpty {
+                if !viewModel.homeDevices.isEmpty {
                     Spacer()
                     HStack {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle(tint: .white))
                         
-                        Text(vizbeeSessionState != .connecting  ? StaticText.deviceNotOnList : (StaticText.connectingTo + (selectedDeviceName ?? "TV")))
+                        Text(vizbeeSessionState != .connecting ? StaticText.deviceNotOnList : (StaticText.connectingTo + (selectedDeviceName ?? "TV")))
                             .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
                             .foregroundColor(Constants.primaryColor)
                             .multilineTextAlignment(.leading)
@@ -63,15 +64,13 @@ struct TVSelectionView: View {
         .navigationBarHidden(true)
         .overlay(
             CustomBackButton(action: {
-                path.removeLast()
+                presentationMode.wrappedValue.dismiss()
+                activeRoute = nil
             })
             .padding(.leading, 16)
             .padding(.top, 8),
             alignment: .topLeading
         )
-        .onDisappear {
-            viewModel.stopDiscovery()
-        }
     }
     
     private var noDevicesFoundView: some View {
@@ -82,19 +81,19 @@ struct TVSelectionView: View {
             .padding()
     }
     
-    private func selectDevice(_ device: HomeDevice) {
-        selectedDeviceId = device.id
+    private func selectDevice(_ device: HomeDeviceModel) {
+        selectedDeviceId = device.deviceId
         selectedDeviceName = device.friendlyName
-        if(vizbeeSessionState != .connecting){
+        if vizbeeSessionState != .connecting {
             viewModel.selectDevice(device)
-        }else{
+        } else {
             viewModel.clickProxyCastIcon()
         }
     }
 }
 
 struct DeviceButton: View {
-    let device: HomeDevice
+    let device: HomeDeviceModel
     let isSelected: Bool
     let isConnecting: Bool
     let action: () -> Void
@@ -119,6 +118,8 @@ struct DeviceButton: View {
 // Preview
 struct TVSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        TVSelectionView(path: .constant([.TVSelectionView]), vizbeeSessionState: .constant(.notConnected), viewModel: TVSelectionViewModel())
+        TVSelectionView(activeRoute: .constant(.TVSelectionView),
+                       vizbeeSessionState: .constant(.notConnected),
+                       viewModel: TVSelectionViewModel())
     }
 }

@@ -1,18 +1,10 @@
-//
-//  MainView.swift
-//  Movidle
-//
-//  Copyright © Vizbee Inc. All rights reserved.
-//
-
 import SwiftUI
 
 struct MainView: View {
     @State private var isShowingSplash = true
     @State private var tvConnectionOffset: CGFloat = 500
     @State private var tvConnectionOpacity: Double = 0
-    @State var connectionViewPath = [Route]()
-    @State var connectedViewPath = [Route]()
+    @State private var activeRoute: Route?
     
     @ObservedObject var viewModel: MainViewModel = MainViewModel()
     
@@ -23,63 +15,88 @@ struct MainView: View {
             
             if isShowingSplash {
                 SplashScreen()
-            }else if(viewModel.showGameViewFromRoute != nil){
+            } else if viewModel.showGameViewFromRoute != nil {
                 GameView(showGameViewFromRoute: $viewModel.showGameViewFromRoute,
-                    viewModel:GameViewModel())
-            }else{
-                NavigationStack(path: viewModel.vizbeeSessionState == .connected ? $connectedViewPath: $connectionViewPath) {
-                    if(viewModel.vizbeeSessionState == .connected){
-                        ConnectedView(path: $connectedViewPath,
-                                      viewModel: ConnectedViewModel())
-                        .navigationDestination(for: Route.self) { index in
-                            
-                            switch index {
-                                
-                            case .JoinGameView:
-                                JoinGameView(path: $connectedViewPath,
-                                             showGameViewFromRoute: $viewModel.showGameViewFromRoute,
-                                             viewModel: JoinGameViewModel())
-                                
-                            case .StartGameView:
-                                StartGameView(path: $connectedViewPath,
-                                              showGameViewFromRoute: $viewModel.showGameViewFromRoute,
-                                              viewModel: StartGameViewModel())
-                                
-                            case .TVDisconnectView:
-                                TVDisconnectView(path: $connectedViewPath,
-                                                 vizbeeSessionState:$viewModel.vizbeeSessionState,
-                                                 viewModel: TVDisconnectViewModel())
-                                
-                            default:
-                                EmptyView()
-                            }
+                        viewModel: GameViewModel())
+            } else {
+                Group {
+                    if viewModel.vizbeeSessionState == .connected {
+                        NavigationView {
+                            ConnectedView(activeRoute: $activeRoute,
+                                          showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                                          viewModel: ConnectedViewModel())
+                                .navigationBarHidden(true)
+                                .background(
+                                    Group {
+                                        // Wrap NavigationLinks in if statements to prevent initialization issues
+                                        if activeRoute == .JoinGameView || activeRoute == nil {
+                                            NavigationLink(
+                                                destination: JoinGameView(activeRoute: $activeRoute,
+                                                                        showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                                                                        viewModel: JoinGameViewModel()),
+                                                tag: Route.JoinGameView,
+                                                selection: $activeRoute) {
+                                                    EmptyView()
+                                                }
+                                        }
+                                        
+                                        if activeRoute == .StartGameView || activeRoute == nil {
+                                            NavigationLink(
+                                                destination: StartGameView(activeRoute: $activeRoute,
+                                                                           showGameViewFromRoute: $viewModel.showGameViewFromRoute,
+                                                                           viewModel: StartGameViewModel()),
+                                                tag: Route.StartGameView,
+                                                selection: $activeRoute) {
+                                                    EmptyView()
+                                                }
+                                        }
+                                        
+                                        if activeRoute == .TVDisconnectView || activeRoute == nil {
+                                            NavigationLink(
+                                                destination: TVDisconnectView(activeRoute: $activeRoute,
+                                                                              vizbeeSessionState: $viewModel.vizbeeSessionState,
+                                                                              viewModel: TVDisconnectViewModel()),
+                                                tag: Route.TVDisconnectView,
+                                                selection: $activeRoute) {
+                                                    EmptyView()
+                                                }
+                                        }
+                                    }
+                                )
                         }
-                    }else{
-                        TVConnectionView(path: $connectionViewPath, vizbeeSessionState: $viewModel.vizbeeSessionState)
-                            .offset(x: tvConnectionOffset)
-                            .opacity(tvConnectionOpacity)
-                        
-                            .navigationDestination(for: Route.self) { index in
-                                
-                                switch index {
-                                    
-                                case .TVSelectionView:
-                                    TVSelectionView(path: $connectionViewPath, vizbeeSessionState: $viewModel.vizbeeSessionState,
-                                                    viewModel:TVSelectionViewModel())
-                                    
-                                default:
-                                    EmptyView()
-                                }
-                            }
+                    } else {
+                        NavigationView {
+                            TVConnectionView(activeRoute: $activeRoute,
+                                           vizbeeSessionState: $viewModel.vizbeeSessionState)
+                                .offset(x: tvConnectionOffset)
+                                .opacity(tvConnectionOpacity)
+                                .navigationBarHidden(true)
+                                .background(
+                                    Group {
+                                        // Wrap in if statement
+                                        if activeRoute == .TVSelectionView || activeRoute == nil {
+                                            NavigationLink(
+                                                destination: TVSelectionView(activeRoute: $activeRoute,
+                                                                             vizbeeSessionState: $viewModel.vizbeeSessionState,
+                                                                             viewModel: TVSelectionViewModel()),
+                                                tag: Route.TVSelectionView,
+                                                selection: $activeRoute) {
+                                                    EmptyView()
+                                                }
+                                        }
+                                    }
+                                )
+                        }
                     }
                 }
             }
         }
         .onChange(of: viewModel.vizbeeSessionState) { newValue in
-            if(newValue == .connected){
-                connectionViewPath.removeAll()
-            } else {
-                connectedViewPath.removeAll()
+            // Add dispatch to main queue and wrap in withAnimation
+            DispatchQueue.main.async {
+                withAnimation {
+                    activeRoute = nil
+                }
             }
         }
         .onAppear {

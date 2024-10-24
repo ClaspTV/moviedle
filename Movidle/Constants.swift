@@ -31,7 +31,7 @@ struct StaticText{
     static let selectToConnect = "Select TV to Connect"
     static let noDeviceFound = "Your TV device and mobile need to be on the same network to be discovered."
     static let deviceNotOnList = "If your device is not listed above, please wait for it to be discovered."
-    static let successfullyConnected = "Successfully Connected\nto "
+    static let successfullyConnected = "Successfully Connected to"
     static let joinGame = "Join Game"
     static let createGame = "Create Game" 
     static let gameCode = "Game Code"
@@ -50,5 +50,7 @@ struct StaticText{
     static let yourScore = "Your Score"
     static let waiting = "Waiting for other players to join..."
     static let shareGameCode = "Join my Movidle game with code: "
+    static let guessRight = "You've guessed the right movie!"
+    static let guessWait = "Now waiting for others to figure it out."
 }
 

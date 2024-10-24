@@ -12,33 +12,35 @@ import VizbeeKit
 class MainViewModel: ObservableObject {
     @Published var vizbeeSessionState: VZBSessionState = VZBSessionState.noDeviceAvailable
     @Published var showGameViewFromRoute: Route? = nil
-
+    
     private var stateChangeObserver: NSObjectProtocol?
     
     init() {
-        stateChangeObserver = NotificationCenter.default.addObserver(
-            forName: Notification.Name(VizbeeWrapper.kVZBCastStateChanged),
-            object: nil,
-            queue: nil
-        ) { [weak self] notification in
-            if let state = notification.userInfo?[VizbeeWrapper.kVZBCastState] as? VZBSessionState {
-                self?.vizbeeSessionState = state
-                switch state {
-                case .connected:
+        NotificationCenter.default.addObserver(self, selector: #selector(notification), name: Notification.Name(VizbeeWrapper.kVZBCastStateChanged), object: nil)
+    }
+    
+    @objc func notification(notification: Notification){
+        if let state = notification.userInfo?[VizbeeWrapper.kVZBCastState] as? VZBSessionState {
+            switch state {
+            case .connected:
+                self.vizbeeSessionState = state
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     VizbeeXWrapper.shared.connect(completion: nil)
-                case .notConnected:
-                    VizbeeXWrapper.shared.disconnect()
-                    self?.showGameViewFromRoute = nil
-                default:
-                    break
                 }
+                
+            case .notConnected:
+                self.vizbeeSessionState = state
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    VizbeeXWrapper.shared.disconnect()
+                }
+                self.showGameViewFromRoute = nil
+            default:
+                break
             }
         }
     }
     
     deinit {
-        if let stateChangeObserver = stateChangeObserver {
-            NotificationCenter.default.removeObserver(stateChangeObserver)
-        }
+        NotificationCenter.default.removeObserver(self)
     }
 }

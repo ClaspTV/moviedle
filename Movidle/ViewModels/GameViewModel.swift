@@ -18,6 +18,8 @@ class GameViewModel: ObservableObject {
     @Published var userScore : Int = 0
     @Published var guessErrorMessage: String?
     @Published var isSubmitEnabled: Bool = true
+    @Published var guessRightAnswerForMovieNumber: Int? = nil
+    @Published var isCompleted : Bool = false
     
     private var clipPayLoad : GameStatusPayload?
     private var timer: Timer?
@@ -54,8 +56,21 @@ class GameViewModel: ObservableObject {
     
     private func handleTimeUp() {
         isSubmitEnabled = false
-        if let clipPayLoad = clipPayLoad {
-            guessErrorMessage = "Time's up! The correct answer was: \(clipPayLoad.movieName)"
+    }
+    
+    private func sendScoreUpdate() {
+        let messageParam = [
+            "msgType": MessageType.scoreUpdate.rawValue,
+            "userId": VizbeeXWrapper.shared.getUserID(),
+            "userName": VizbeeXWrapper.shared.getUserName(),
+            "score": "\(userScore)"
+        ]
+        VizbeeXWrapper.shared.send(message: messageParam, on: .broadcast) { [weak self] success, error in
+            if !success {
+                // self?.guessErrorMessage = "Failed to update score"
+            }else{
+                self?.guessRightAnswerForMovieNumber = self?.clipPayLoad?.movieNumber
+            }
         }
     }
     
@@ -64,36 +79,24 @@ class GameViewModel: ObservableObject {
         
         if let clipPayLoad = clipPayLoad {
             let normalizedGuess = userGuess.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
-            let normalizedAnswer = clipPayLoad.movieName.lowercased()
+            let normalizedAnswer = clipPayLoad.movieName.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
             
             if normalizedGuess == normalizedAnswer {
                 // Correct guess
                 userScore += clipPayLoad.clipScore
-                stopTimer()
                 isSubmitEnabled = false
                 guessErrorMessage = nil
+                sendScoreUpdate()
                 
-                let messageParam = [
-                    "msg_type": MessageType.scoreUpdate.rawValue,
-                    "userId": VizbeeXWrapper.shared.getUserID(),
-                    "userName": VizbeeXWrapper.shared.getUserName(),
-                    "score": "\(userScore)"
-                ]
-                
-                VizbeeXWrapper.shared.send(message: messageParam, on: .broadcast) { [weak self] success, error in
-                    if !success {
-                        //                        self?.guessErrorMessage = "Failed to update score"
-                    }
-                }
             } else {
                 // Wrong guess
                 remainingRetries -= 1
-                guessErrorMessage = "Incorrect guess. \(remainingRetries) \(remainingRetries == 1 ? "try" : "tries") remaining."
+                guessErrorMessage = "Incorrect guess. Please try again."
                 userGuess = ""
                 
                 if remainingRetries == 0 {
                     isSubmitEnabled = false
-                    guessErrorMessage = "No more tries! The correct answer was: \(clipPayLoad.movieName)"
+//                    guessErrorMessage = "No more tries! The correct answer was: \(clipPayLoad.movieName)"
                 }
             }
         }
@@ -182,23 +185,33 @@ class GameViewModel: ObservableObject {
     
     func clipStarted(_ payload :GameStatusPayload){
         clipPayLoad = payload
+        if(guessRightAnswerForMovieNumber != nil && guessRightAnswerForMovieNumber != payload.movieNumber){
+            guessRightAnswerForMovieNumber = nil
+        }
         gameInProgress = true
         gameState = .playing
-        movieTitle = payload.movieName
+        movieTitle = "Movie \(payload.movieNumber)"
         movieSubtitle = "Clip \(payload.clipNumber)/\(payload.totalClips)"
     }
     
     func clipEnded(_ payload: GameStatusPayload) {
+        userGuess = ""
         clipPayLoad = payload
         gameInProgress = true
         gameState = .guessing
-        movieTitle = payload.movieName
+        movieTitle = "Movie \(payload.movieNumber)"
         movieSubtitle = "Clip \(payload.clipNumber)/\(payload.totalClips)"
         startTimer()
     }
     
     func movieCompleted(_ payload :GameStatusPayload){
-        clipPayLoad = payload
+        sendScoreUpdate()
+        if(self.clipPayLoad?.movieNumber ==  self.clipPayLoad?.totalMovies){
+            isCompleted = true
+            movieTitle = "All Movies Completed"
+        }else{
+            movieTitle = "Movie \(payload.movieNumber) Completed"
+        }
         gameInProgress = true
         gameState = .completed
         displayScore()
@@ -231,7 +244,7 @@ extension GameViewModel: VizbeeXWrapperDelegate {
         print("Received message: \(message.payload)")
         let message = MessagePayloadFactory.createPayload(from: message.payload)
         
-        if(connectionType == .bicast){
+        if(connectionType == .unicast){
             // Handle incoming messages
             if let payload = message.gameStatus{
                 switch payload.status {
@@ -257,6 +270,7 @@ extension GameViewModel: VizbeeXWrapperDelegate {
                     ]
                 }
             }
+            updateSortedPlayerScores()
         }
     }
     

@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>FredokaOne-Regular.ttf</string>
-	</array>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_googlecast._tcp</string>
@@ -13,7 +9,9 @@
 		<string>_amzn-wplay._tcp</string>
 		<string>_viziocast._tcp</string>
 	</array>
-	<key>NSLocalNetworkUsageDescription</key>
-	<string>Movidle enables you to connect to tv on your home network.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>FredokaOne-Regular.ttf</string>
+	</array>
 </dict>
 </plist>

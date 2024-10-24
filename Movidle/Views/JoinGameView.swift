@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct JoinGameView: View {
-    @Binding var path: [Route]
+    @Binding var activeRoute: Route?
     @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: JoinGameViewModel
-    
+    @Environment(\.presentationMode) var presentationMode
     @State private var isKeyboardVisible = false
-
+    
     var body: some View {
         ZStack {
             // Background
@@ -29,7 +29,7 @@ struct JoinGameView: View {
                     .foregroundColor(Constants.primaryColor)
                     .padding(.bottom, 40)
                 
-                StyledTextField(text: $viewModel.joinCode, placeholder: StaticText.joinCode , textLimit: 4)
+                StyledTextField(text: $viewModel.joinCode, placeholder: StaticText.joinCode)
                     .padding(.horizontal, 80)
                 
                 if let errorMessage = viewModel.errorMessage {
@@ -39,8 +39,8 @@ struct JoinGameView: View {
                 }
                 
                 Button(action: {
-                    path.removeAll()
                     showGameViewFromRoute = .JoinGameView
+                    activeRoute = nil
                     viewModel.joinGame()
                 }) {
                     Text(StaticText.join)
@@ -61,14 +61,18 @@ struct JoinGameView: View {
         .navigationBarHidden(true)
         .overlay(
             CustomBackButton(action: {
-                path.removeLast()
+                presentationMode.wrappedValue.dismiss()
+                activeRoute = nil
             })
             .padding(.leading, 16)
             .padding(.top, 8),
             alignment: .topLeading
         )
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                         to: nil,
+                                         from: nil,
+                                         for: nil)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
             isKeyboardVisible = true
@@ -81,6 +85,10 @@ struct JoinGameView: View {
 
 struct JoinGameView_Previews: PreviewProvider {
     static var previews: some View {
-        JoinGameView(path: .constant([.JoinGameView]), showGameViewFromRoute: .constant(nil), viewModel: JoinGameViewModel())
+        JoinGameView(
+            activeRoute: .constant(.JoinGameView),
+            showGameViewFromRoute: .constant(nil),
+            viewModel: JoinGameViewModel()
+        )
     }
 }

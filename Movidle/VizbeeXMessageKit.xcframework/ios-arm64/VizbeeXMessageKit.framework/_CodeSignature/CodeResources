@@ -12,13 +12,17 @@
 		<data>
 		rjssJXKs5EjXjXXXHmF3bXjy5eM=
 		</data>
+		<key>Modules/VizbeeXMessageKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<data>
+		gYgZjYSNp1HVtxx5f06+4bnlV0o=
+		</data>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		RA1JFL5b6YO2WocpyPVtCq3Cr2w=
+		B2C63yJnsB9Vgp3wKMY4Y3cwZE0=
 		</data>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		DIf+N0cAf1P1kyvXFh5I+S/s1E4=
+		NuTW7wS1oPgmMa3j0c1Z72sEw18=
 		</data>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -26,11 +30,11 @@
 		</data>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		DIf+N0cAf1P1kyvXFh5I+S/s1E4=
+		NuTW7wS1oPgmMa3j0c1Z72sEw18=
 		</data>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		bD8JSYtCDdTNYU8y4Pd1zQ4PUJ4=
+		hyqAeIuKLiB3sVoaJM8ndx4KW34=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -46,18 +50,25 @@
 			YNXSBcjZbaGYb7K3mXd+ovE8L2kruYZH5pKzbcYN6N8=
 			</data>
 		</dict>
+		<key>Modules/VizbeeXMessageKit.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5y5kfexj5wbF99h2weDqnNtDznhPPdzg8CBc6cgKv/0=
+			</data>
+		</dict>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7DOqdupzyoIqOVDk0gGaIB3ukn2NTVGNm3lqJJa2baE=
+			oUpcRlAy3EV2bI0wJzt3e5lRQjfEm+IjUgwJmTpB9i0=
 			</data>
 		</dict>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2scytWpH3nuqh2pcHYj0731712ugqom/xUW/36CFXCk=
+			sVMXI9k4oZYKmR+80Ho4mBjzk9FBOcEDsSu+ckxrDN0=
 			</data>
 		</dict>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -71,14 +82,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2scytWpH3nuqh2pcHYj0731712ugqom/xUW/36CFXCk=
+			sVMXI9k4oZYKmR+80Ho4mBjzk9FBOcEDsSu+ckxrDN0=
 			</data>
 		</dict>
 		<key>Modules/VizbeeXMessageKit.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			A/FJiQjRNfuv/yBWKnQhAXZAKtJax6z1n7ML1TDh264=
+			m0SzH70RJN9iUu5lek1YZ3ytx1g/izISmBiaX5NUlFI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

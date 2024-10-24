@@ -98,6 +98,7 @@ class VizbeeWrapper: NSObject {
 extension VizbeeWrapper: VZBSessionStateDelegate {
   
     func addSessionStateDelegate(sessionDelegate: VZBSessionStateDelegate) {
+        print("Vizbee: addSessionStateDelegate")
         guard let sessionManager = sessionManager else { return }
         sessionManager.add(sessionDelegate)
     }
@@ -120,17 +121,24 @@ extension VizbeeWrapper: VZBSessionStateDelegate {
         default:
             isConnected = false
         }
-        // Broadcast - post cast connected notification
-        NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastStateChanged), object: nil, userInfo: [VizbeeWrapper.kVZBCastState: newState]);
+        
+        print("Vizbee: NotificationCenter isDisconnect = ", newState == .notConnected , " isConnected = ", newState == .connected)
+
+        
     }
   
     func onConnected() {
         isConnected = true
+        
+        // Broadcast - post cast connected notification
+        NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastStateChanged), object: nil, userInfo: [VizbeeWrapper.kVZBCastState: VZBSessionState.connected]);
     }
     
     func onDisconnected() {
         if (isConnected) {
             isConnected = false
+            // Broadcast - post cast connected notification
+            NotificationCenter.default.post(name: Notification.Name(VizbeeWrapper.kVZBCastStateChanged), object: nil, userInfo: [VizbeeWrapper.kVZBCastState: VZBSessionState.notConnected]);
         }
     }
     
@@ -139,6 +147,13 @@ extension VizbeeWrapper: VZBSessionStateDelegate {
     }
   
     func disconnectSession() {
+        print("Vizbee: disconnectSession")
         sessionManager?.disconnectSession()
+    }
+    
+    func clickCastIconProxy(){
+        if let viewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController{
+            Vizbee.getCastIconProxy().click(viewController)
+        }
     }
 }

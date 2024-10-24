@@ -19,7 +19,7 @@ enum GameState {
 struct GameView: View {
     @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: GameViewModel
-
+    
     var body: some View {
         ZStack {
             // Background
@@ -27,7 +27,7 @@ struct GameView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack(spacing: 20) {
-               
+                
                 switch viewModel.gameState {
                 case .loading:
                     ProgressView()
@@ -85,57 +85,103 @@ struct GameView: View {
                         .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
                         .foregroundColor(Constants.primaryColor)
                         .padding(.bottom, 40)
-                    
-                    StyledTextField(text: $viewModel.userGuess, placeholder: StaticText.typeYourGuess)
-                        .padding(.horizontal, 80)
-
-                    Button(action: viewModel.submitGuess) {
-                        Text(StaticText.submit)
-                            .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
-                            .foregroundColor(Constants.secondaryColor)
-                            .frame(maxWidth: .infinity)
-                            .padding()
-                            .background(Constants.primaryColor)
-                            .cornerRadius(30)
-                            .padding(.horizontal, 40)
-                    }
-                    .buttonStyle(PressableButtonStyle())
-                    .padding(.horizontal, 40)
-                
-                case .completed:
-                    ScrollView {
-                    // Film clapper icon
-                    Image(.film)
-                        .foregroundColor(Constants.primaryColor)
-                   
-                    Text("\(viewModel.movieTitle) Completed")
-                        .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
-                        .foregroundColor(Constants.primaryColor)
-                    Text(StaticText.yourScore)
-                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                        .foregroundColor(Constants.primaryColor)
-                        Text("\($viewModel.userScore)")
-                        .font(.custom(Constants.fontFamily, size: Constants.titleFontSize))
-                        .foregroundColor(Constants.primaryColor)
+                    if(viewModel.guessRightAnswerForMovieNumber != nil){
+                        Text(StaticText.guessRight)
+                            .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                            .foregroundColor(Constants.primaryColor)
+                            .padding(.horizontal,20)
                         
-                        VStack(spacing: 1) {
-                            ForEach(viewModel.sortedPlayerScores.indices, id: \.self) { index in
-                                HStack {
-                                    Text("\(index + 1).   \(viewModel.sortedPlayerScores[index].name)")
-                                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                                        .foregroundColor(Constants.secondaryColor)
-                                    Spacer()
-                                    Text("\(viewModel.sortedPlayerScores[index].score)")
-                                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                                        .foregroundColor(Constants.secondaryColor)
-                                }
-                                .frame(height: 50)
-                                .padding(.horizontal, 20)
-                                .background(viewModel.sortedPlayerScores[index].isSelf ? Constants.primaryColor : Constants.primaryColor.opacity(0.2))
-                            }
-                        }.cornerRadius(10)
+                        Text(StaticText.guessWait)
+                            .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                            .foregroundColor(Constants.primaryColor)
+                    }else{
+                        StyledTextField(text: $viewModel.userGuess, placeholder: StaticText.typeYourGuess)
+                            .padding(.horizontal, 80)
+                        
+                        // Add error message here
+                        if let errorMessage = viewModel.guessErrorMessage {
+                            Text(errorMessage)
+                                .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
+                                .foregroundColor(Constants.redColor)  // or use a custom error color from Constants
+                                .padding(.top, 8)
+                                .padding(.horizontal, 80)
+                        }
+                        
+                        Button(action: viewModel.submitGuess) {
+                            Text(StaticText.submit)
+                                .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
+                                .foregroundColor(Constants.secondaryColor)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Constants.primaryColor)
+                                .cornerRadius(30)
+                                .padding(.horizontal, 40)
+                        }
+                        .buttonStyle(PressableButtonStyle())
+                        .padding(.horizontal, 40)
                     }
-                    .padding()
+                case .completed:
+                    ZStack(alignment: .top) {
+                        // Content in ScrollView
+                        GeometryReader { geometry in
+                            ScrollView {
+                                VStack {
+                                    // Film clapper icon
+                                    Image(.film)
+                                        .foregroundColor(Constants.primaryColor)
+                                        .padding(.top, 20)
+                                    
+                                    Text(viewModel.movieTitle)
+                                        .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
+                                        .foregroundColor(Constants.primaryColor)
+                                        .padding()
+                                    Text(StaticText.yourScore)
+                                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                        .foregroundColor(Constants.primaryColor)
+                                    Text("\(viewModel.userScore)")
+                                        .font(.custom(Constants.fontFamily, size: Constants.titleFontSize))
+                                        .foregroundColor(Constants.primaryColor)
+                                    
+                                    VStack(spacing: 1) {
+                                        ForEach(viewModel.sortedPlayerScores.indices, id: \.self) { index in
+                                            HStack {
+                                                Text("\(index + 1).   \(viewModel.sortedPlayerScores[index].name)")
+                                                    .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                                    .foregroundColor(Constants.secondaryColor)
+                                                Spacer()
+                                                Text("\(viewModel.sortedPlayerScores[index].score)")
+                                                    .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                                    .foregroundColor(Constants.secondaryColor)
+                                            }
+                                            .frame(height: 50)
+                                            .padding(.horizontal, 20)
+                                            .background(viewModel.sortedPlayerScores[index].isSelf ? Constants.primaryColor : Constants.primaryColor.opacity(0.2))
+                                        }
+                                    }
+                                    .cornerRadius(10)
+                                }
+                                .padding()
+                                .frame(minWidth:geometry.size.width, minHeight: geometry.size.height - 60)
+                            }
+                        }
+                        if(viewModel.isCompleted){
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    showGameViewFromRoute = nil
+                                }) {
+                                    Image(systemName: "xmark")
+                                        .font(.system(size: 20))
+                                        .foregroundColor(Constants.primaryColor)
+                                        .frame(width: 44, height: 44)
+                                        .background(Circle().fill(Constants.primaryColor.opacity(0.2)))
+                                }
+                                .buttonStyle(PressableButtonStyle())
+                                .padding(.trailing, 16)
+                            }
+                            .padding(.top, 16)
+                        }
+                    }
                 }
             }
         }

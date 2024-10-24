@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct StartGameView: View {
-    @Binding var path: [Route]
+    @Binding var activeRoute: Route?
     @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: StartGameViewModel
-
     @Environment(\.presentationMode) var presentationMode
     @State private var isKeyboardVisible = false
-
+    
     var body: some View {
         ZStack {
             // Background
@@ -39,9 +38,13 @@ struct StartGameView: View {
                         .foregroundColor(Constants.primaryColor)
                     
                     OutlinedText(text: StaticText.share,
-                                 fontSize: Constants.secondaryFontSize, fontFamily: Constants.fontFamily, strokeWidth: 4, strokeColor: .white)
-                    .frame(width: 200, height: 30, alignment: .center)
-                }.padding(.horizontal, 40)
+                                fontSize: Constants.secondaryFontSize,
+                                fontFamily: Constants.fontFamily,
+                                strokeWidth: 4,
+                                strokeColor: .white)
+                        .frame(width: 200, height: 30, alignment: .center)
+                }
+                .padding(.horizontal, 40)
                 
                 Text(StaticText.startGameSubtitle)
                     .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
@@ -51,9 +54,9 @@ struct StartGameView: View {
                     .padding(.bottom, 40)
                 
                 Button(action: {
-                        // open start connection
-                        path.removeAll()
-                        showGameViewFromRoute = .StartGameView
+                    showGameViewFromRoute = .StartGameView
+                    // open start connection
+                    activeRoute = nil
                 }) {
                     Text(StaticText.startGame)
                         .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
@@ -71,14 +74,18 @@ struct StartGameView: View {
         .navigationBarHidden(true)
         .overlay(
             CustomBackButton(action: {
-                path.removeLast()
+                presentationMode.wrappedValue.dismiss()
+                activeRoute = nil
             })
             .padding(.leading, 16)
             .padding(.top, 8),
             alignment: .topLeading
         )
         .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                         to: nil,
+                                         from: nil,
+                                         for: nil)
         }
         .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
             isKeyboardVisible = true
@@ -87,13 +94,17 @@ struct StartGameView: View {
             isKeyboardVisible = false
         }
         .sheet(isPresented: $viewModel.isSharePresented) {
-            ShareSheet(activityItems: [StaticText.shareGameCode + viewModel.gameCode])
+            ShareSheet(activityItems: viewModel.getGameCode())
         }
     }
 }
 
 struct StartGameView_Previews: PreviewProvider {
     static var previews: some View {
-        StartGameView(path: .constant([.StartGameView]), showGameViewFromRoute: .constant(nil), viewModel: StartGameViewModel())
+        StartGameView(
+            activeRoute: .constant(.StartGameView),
+            showGameViewFromRoute: .constant(nil),
+            viewModel: StartGameViewModel()
+        )
     }
 }

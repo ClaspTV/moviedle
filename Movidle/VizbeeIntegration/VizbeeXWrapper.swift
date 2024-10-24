@@ -45,6 +45,12 @@ class VizbeeXWrapper {
         return UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
     }
     
+    func reset(){
+        currentChannelId = ""
+        broadcastX?.disconnect()
+        broadcastX = nil
+    }
+    
     func connect(completion: ((Bool, String?) -> Void)?) {
         
         var errorMessage: String?
@@ -85,6 +91,7 @@ class VizbeeXWrapper {
             self?.handleEvent(.broadcast, event: event, eventInfo: eventInfo)
         }
         broadcastX?.receive { [weak self] message in
+            print("Received message: \(message.payload)")
             self?.delegate?.didReceiveMessage(message, on: .broadcast)
         }
         // Assuming connect is asynchronous and has a completion handler
@@ -125,6 +132,7 @@ class VizbeeXWrapper {
     }
     
     func disconnect() {
+        print("Vizbee: unicastX & broadcastX disconnect")
         unicastX?.disconnect()
         broadcastX?.disconnect()
         unicastX = nil
@@ -145,7 +153,7 @@ class VizbeeXWrapper {
             allowedCharacters.randomElement()!
         })
         
-        currentChannelId = "movidle_\(randomString)"
+        currentChannelId = "movidle-\(randomString)"
     }
 }
 

@@ -39,6 +39,8 @@ class ConnectedViewModel: ObservableObject {
         } else
         if trimmedName.count < 3 {
             errorMessage = "Username must be at least 3 characters long."
+        }else if trimmedName.count >  15 {
+            errorMessage = "Username must be at most 15 characters."
         } else if (trimmedName.range(of: "^[a-zA-Z0-9_]+$", options: .regularExpression, range: nil, locale: nil) == nil){
             errorMessage = "Username can only contain letters, numbers, and underscores."
         } else {
@@ -61,7 +63,7 @@ class ConnectedViewModel: ObservableObject {
         VizbeeXWrapper.shared.setUserName(currentUsername)
     }
     
-    func createGame(_ completion: @escaping () -> Void) {
+    func createGame() {
         updateUserName()
         if VizbeeXWrapper.shared.getChannelId() == ""{
             VizbeeXWrapper.shared.generateUniqueChannelId()
@@ -71,7 +73,6 @@ class ConnectedViewModel: ObservableObject {
                         if(!success) {
                             //TODO: Handle failure
                         }
-                        completion()
                     }
                     
                 }else{
@@ -83,8 +84,11 @@ class ConnectedViewModel: ObservableObject {
                 if(!success) {
                     //TODO: Handle failure
                 }
-                completion()
             }
         }
+    }
+    
+    func reset(){
+        VizbeeXWrapper.shared.reset()
     }
 }

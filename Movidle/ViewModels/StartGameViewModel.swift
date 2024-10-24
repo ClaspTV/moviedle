@@ -14,11 +14,15 @@ class StartGameViewModel: ObservableObject {
     @Published var isSharePresented = false
     
     init() {
-        self.gameCode = VizbeeXWrapper.shared.currentChannelId.split(separator: "_").last.map { String($0) } ?? ""
+        self.gameCode = VizbeeXWrapper.shared.currentChannelId.split(separator: "-").last.map { String($0) } ?? ""
         print("username: ", currentUsername)
     }
     
     func shareGameCode() {
         isSharePresented = true
+    }
+    
+    func getGameCode() -> [String] {
+        return [StaticText.shareGameCode + self.gameCode]
     }
 }

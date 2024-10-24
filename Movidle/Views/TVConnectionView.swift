@@ -5,12 +5,11 @@
 //  Copyright © Vizbee Inc. All rights reserved.
 //
 
-
 import SwiftUI
 import VizbeeKit
 
 struct TVConnectionView: View {
-    @Binding var path: [Route]
+    @Binding var activeRoute: Route?
     @Binding var vizbeeSessionState: VZBSessionState
     
     var body: some View {
@@ -35,11 +34,10 @@ struct TVConnectionView: View {
                     .foregroundColor(Constants.primaryColor)
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 20)
-                    .padding(.horizontal,40)
+                    .padding(.horizontal, 40)
                 
                 Button(action: {
-                    path.removeAll()
-                    path.append(.TVSelectionView)
+                    activeRoute = .TVSelectionView
                 }) {
                     Text(StaticText.connectBtn)
                         .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
@@ -59,7 +57,7 @@ struct TVConnectionView: View {
         }
         .onChange(of: vizbeeSessionState) { newValue in
             if(newValue == .connected) {
-                path.removeAll()
+                activeRoute = nil
             }
         }
         .navigationBarHidden(true)
@@ -70,6 +68,7 @@ struct TVConnectionView: View {
 // Preview
 struct TVConnectionView_Previews: PreviewProvider {
     static var previews: some View {
-        TVConnectionView(path: .constant([]), vizbeeSessionState: .constant(.notConnected))
+        TVConnectionView(activeRoute: .constant(nil),
+                        vizbeeSessionState: .constant(.notConnected))
     }
 }
