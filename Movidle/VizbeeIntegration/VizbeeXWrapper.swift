@@ -27,6 +27,8 @@ class VizbeeXWrapper {
     
     private var userName: String = ""
     
+    private var avatar: String = AvatarGenerator.generateRandomAvatar()
+    
     private init() {}
     
     func getChannelId() -> String {
@@ -43,6 +45,10 @@ class VizbeeXWrapper {
     
     func getUserID() -> String {
         return UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
+    }
+    
+    func getUserAvatar() -> String {
+        return avatar
     }
     
     func reset(){

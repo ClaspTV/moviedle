@@ -11,6 +11,7 @@ struct ConnectedView: View {
     @Binding var activeRoute: Route?
     @Binding var showGameViewFromRoute: Route?
     @ObservedObject var viewModel: ConnectedViewModel
+    @State private var isKeyboardVisible = false
     
     var body: some View {
         ZStack {
@@ -18,72 +19,86 @@ struct ConnectedView: View {
             Image(.splash).resizable()
                 .edgesIgnoringSafeArea(.all)
             
-            VStack(spacing: 30) {
-                // Film clapper icon
-                Image(.film)
-                    .foregroundColor(Constants.primaryColor)
-                
-                // Success message
-                Text(StaticText.successfullyConnected)
-                    .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Constants.primaryColor)
-                    .padding(.horizontal, 40)
-                    .padding(.bottom,-20)
-                Text(viewModel.deviceName)
-                    .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(Constants.primaryColor)
-                    .padding(.horizontal, 40)
-                    .padding()
-                
-                VStack(alignment: .leading, spacing: 5) {
-                    StyledTextField(text: $viewModel.currentUsername, placeholder: StaticText.enterUsername)
-                        .padding(.horizontal, 80)
-                }
-                
-                if let errorMessage = viewModel.errorMessage {
-                    Text(errorMessage)
-                        .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
-                        .foregroundColor(.red)
-                        .padding(.horizontal, 20)
-                        .padding(.top,-20)
-                }
-                
-                // Buttons
-                HStack(spacing: 10) {
-                    Button(action: {
-                        viewModel.createGame()
-                        activeRoute = .StartGameView
-                    }) {
-                        Text(StaticText.createGame)
-                            .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                            .foregroundColor(Constants.secondaryColor)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 60)
-                            .background(Constants.primaryColor)
-                            .cornerRadius(30)
-                            .padding(.trailing, 5)
-                    }.buttonStyle(PressableButtonStyle())
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 30) {
+                    // Add top padding for disconnect button
+                    Spacer()
+                        .frame(height: 60)
                     
-                    Button(action: {
-                        activeRoute = .JoinGameView
-                        viewModel.updateUserName()
-                    }) {
-                        Text(StaticText.joinGame)
-                            .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                            .foregroundColor(Constants.secondaryColor)
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 60)
-                            .background(Constants.primaryColor)
-                            .cornerRadius(30)
-                            .padding(.leading, 5)
+                    // Film clapper icon
+                    Image(.film)
+                        .foregroundColor(Constants.primaryColor)
+                    
+                    // Success message
+                    Text(StaticText.successfullyConnected)
+                        .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Constants.primaryColor)
+                        .padding(.horizontal, 40)
+                        .padding(.bottom,-20)
+                    
+                    Text(viewModel.deviceName)
+                        .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(Constants.primaryColor)
+                        .padding(.horizontal, 40)
+                        .padding()
+                    
+                    VStack(alignment: .leading, spacing: 5) {
+                        StyledTextField(text: $viewModel.currentUsername, placeholder: StaticText.enterUsername)
+                            .padding(.horizontal, 80)
                     }
-                    .buttonStyle(PressableButtonStyle())
+                    
+                    if let errorMessage = viewModel.errorMessage {
+                        Text(errorMessage)
+                            .font(.custom(Constants.fontFamily, size: Constants.tertiaryFontSize))
+                            .foregroundColor(.red)
+                            .padding(.horizontal, 20)
+                            .padding(.top,-20)
+                    }
+                    
+                    // Buttons
+                    HStack(spacing: 10) {
+                        Button(action: {
+                            viewModel.createGame()
+                            activeRoute = .StartGameView
+                        }) {
+                            Text(StaticText.createGame)
+                                .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                .foregroundColor(Constants.secondaryColor)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 60)
+                                .background(Constants.primaryColor)
+                                .cornerRadius(30)
+                                .padding(.trailing, 5)
+                        }.buttonStyle(PressableButtonStyle())
+                        
+                        Button(action: {
+                            activeRoute = .JoinGameView
+                            viewModel.updateUserName()
+                        }) {
+                            Text(StaticText.joinGame)
+                                .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                .foregroundColor(Constants.secondaryColor)
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 60)
+                                .background(Constants.primaryColor)
+                                .cornerRadius(30)
+                                .padding(.leading, 5)
+                        }
+                        .buttonStyle(PressableButtonStyle())
+                    }
+                    .padding()
+                    .disabled(!viewModel.isButtonEnabled())
+                    .opacity(viewModel.isButtonEnabled() ? 1.0 : 0.5)
+                    
+                    // Add bottom padding when keyboard is visible
+                    if isKeyboardVisible {
+                        Spacer()
+                            .frame(height: 200) // Adjust this value based on your needs
+                    }
                 }
-                .padding()
-                .disabled(!viewModel.isButtonEnabled())
-                .opacity(viewModel.isButtonEnabled() ? 1.0 : 0.5)
+                .frame(minHeight: UIScreen.main.bounds.height - 100)
             }
         }
         .onAppear(){
@@ -108,6 +123,12 @@ struct ConnectedView: View {
             .padding(.top, 16),
             alignment: .topTrailing
         )
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillShowNotification)) { _ in
+            isKeyboardVisible = true
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification)) { _ in
+            isKeyboardVisible = false
+        }
     }
 }
 

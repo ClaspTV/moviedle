@@ -191,6 +191,7 @@ struct ScoreUpdatePayload: Codable {
     let userId: String
     let userName: String
     let score: String
+    let userAvatar: String
     
     init?(dictionary: [String: Any]) {
         guard let msgTypeString = dictionary["msgType"] as? String,
@@ -206,6 +207,7 @@ struct ScoreUpdatePayload: Codable {
         self.userId = userId
         self.userName = userName
         self.score = score
+        self.userAvatar = dictionary["userAvatar"] as? String ?? ""
     }
     
     func toDictionary() -> [String: Any] {
@@ -213,7 +215,8 @@ struct ScoreUpdatePayload: Codable {
             "msgType": msgType.rawValue,
             "userId": userId,
             "userName": userName,
-            "score": score
+            "score": score,
+            "userAvatar": userAvatar
         ]
     }
 }

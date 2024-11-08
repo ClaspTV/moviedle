@@ -40,7 +40,8 @@ struct TVSelectionView: View {
                                 action: { selectDevice(device) }
                             )
                         }
-                    }
+                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .multilineTextAlignment(.center)
                 }
                 
                 if !viewModel.homeDevices.isEmpty {

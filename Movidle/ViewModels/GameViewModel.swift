@@ -13,7 +13,7 @@ class GameViewModel: ObservableObject {
     @Published var timeLeft: Int = 30
     @Published var userGuess: String = ""
     @Published var playerScores: [String:[String:String]] = [:]
-    @Published var sortedPlayerScores: [(name: String, score: Int, isSelf: Bool)] = []
+    @Published var sortedPlayerScores: [(name: String, score: Int, isSelf: Bool, avatar:String)] = []
     @Published var errorMessage: String?
     @Published var userScore : Int = 0
     @Published var guessErrorMessage: String?
@@ -31,38 +31,39 @@ class GameViewModel: ObservableObject {
         VizbeeXWrapper.shared.delegate = self
     }
     
-    func startTimer() {
-        stopTimer()
-        timeLeft = 30
-        isSubmitEnabled = true
-        guessErrorMessage = nil
-        remainingRetries = 3
-        
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            if self.timeLeft > 0 {
-                self.timeLeft -= 1
-                if self.timeLeft == 0 {
-                    self.handleTimeUp()
-                }
-            }
-        }
-    }
-    
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-    
-    private func handleTimeUp() {
-        isSubmitEnabled = false
-    }
+//    func startTimer() {
+//        stopTimer()
+//        timeLeft = 30
+//        isSubmitEnabled = true
+//        guessErrorMessage = nil
+//        remainingRetries = 3
+//
+//        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+//            guard let self = self else { return }
+//            if self.timeLeft > 0 {
+//                self.timeLeft -= 1
+//                if self.timeLeft == 0 {
+//                    self.handleTimeUp()
+//                }
+//            }
+//        }
+//    }
+//
+//    private func stopTimer() {
+//        timer?.invalidate()
+//        timer = nil
+//    }
+//
+//    private func handleTimeUp() {
+//        isSubmitEnabled = false
+//    }
     
     private func sendScoreUpdate() {
         let messageParam = [
             "msgType": MessageType.scoreUpdate.rawValue,
             "userId": VizbeeXWrapper.shared.getUserID(),
             "userName": VizbeeXWrapper.shared.getUserName(),
+            "userAvatar": VizbeeXWrapper.shared.getUserAvatar(),
             "score": "\(userScore)"
         ]
         VizbeeXWrapper.shared.send(message: messageParam, on: .broadcast) { [weak self] success, error in
@@ -197,18 +198,20 @@ class GameViewModel: ObservableObject {
     func clipEnded(_ payload: GameStatusPayload) {
         userGuess = ""
         clipPayLoad = payload
-        gameInProgress = true
-        gameState = .guessing
         movieTitle = "Movie \(payload.movieNumber)"
         movieSubtitle = "Clip \(payload.clipNumber)/\(payload.totalClips)"
-        startTimer()
+//        startTimer()
+        sendScoreUpdate()
+        gameInProgress = true
+        gameState = .completed
+        displayScore()
     }
     
     func movieCompleted(_ payload :GameStatusPayload){
         sendScoreUpdate()
         if(self.clipPayLoad?.movieNumber ==  self.clipPayLoad?.totalMovies){
             isCompleted = true
-            movieTitle = "All Movies Completed"
+            movieTitle = "Game Completed"
         }else{
             movieTitle = "Movie \(payload.movieNumber) Completed"
         }
@@ -218,11 +221,12 @@ class GameViewModel: ObservableObject {
     }
     
     func updateSortedPlayerScores() {
-        let sorted = playerScores.compactMap { (userId, data) -> (name: String, score: Int, isSelf: Bool)? in
+        let sorted = playerScores.compactMap { (userId, data) -> (name: String, score: Int, isSelf: Bool, avatar:String)? in
             guard let name = data["name"],
                   let scoreString = data["score"],
+                  let avatar = data["avatar"],
                   let score = Int(scoreString) else { return nil }
-            return (name: name, score: score,isSelf: userId == VizbeeXWrapper.shared.getUserID())
+            return (name: name, score: score,isSelf: userId == VizbeeXWrapper.shared.getUserID(),avatar:avatar)
         }
             .sorted { $0.score > $1.score }
         
@@ -232,8 +236,7 @@ class GameViewModel: ObservableObject {
     }
     
     func displayScore(){
-        playerScores[VizbeeXWrapper.shared.getUserID()] = ["name" : VizbeeXWrapper.shared.getUserName(),
-                                                           "score" : "\(userScore)"]
+        playerScores[VizbeeXWrapper.shared.getUserID()] = ["name" : VizbeeXWrapper.shared.getUserName(),"avatar": VizbeeXWrapper.shared.getUserAvatar(), "score" : "\(userScore)"]
         updateSortedPlayerScores()
     }
 }
@@ -266,7 +269,8 @@ extension GameViewModel: VizbeeXWrapperDelegate {
                 } else {
                     playerScores[scoreUpdatePayload.userId] = [
                         "name": scoreUpdatePayload.userName,
-                        "score": scoreUpdatePayload.score
+                        "score": scoreUpdatePayload.score,
+                        "avatar": scoreUpdatePayload.userAvatar
                     ]
                 }
             }

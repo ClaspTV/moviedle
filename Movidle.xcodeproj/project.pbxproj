@@ -50,6 +50,8 @@
 		84C145502CB6D0330000F109 /* TVDisconnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C1454F2CB6D0330000F109 /* TVDisconnectViewModel.swift */; };
 		84C145532CB6EA250000F109 /* UserDefaultsStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C145522CB6EA250000F109 /* UserDefaultsStorage.swift */; };
 		84C657A62CC68BF400767167 /* VizbeeXWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C657A52CC68BF400767167 /* VizbeeXWrapper.swift */; };
+		84DADA962CDE20F8000C6A5B /* AvatarGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DADA952CDE20F8000C6A5B /* AvatarGenerator.swift */; };
+		84DADA982CDE2663000C6A5B /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DADA972CDE2663000C6A5B /* CachedAsyncImage.swift */; };
 		84E9D4F92CC14997009C6EF0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9D4F82CC14997009C6EF0 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,8 @@
 		84C145522CB6EA250000F109 /* UserDefaultsStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStorage.swift; sourceTree = "<group>"; };
 		84C6579C2CC68AD400767167 /* VizbeeXMessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VizbeeXMessageKit.framework; path = "../../../Desktop/VizbeeXMessageKit 2024-10-21 18-40-47/VizbeeXMessageKit.framework"; sourceTree = "<group>"; };
 		84C657A52CC68BF400767167 /* VizbeeXWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VizbeeXWrapper.swift; sourceTree = "<group>"; };
+		84DADA952CDE20F8000C6A5B /* AvatarGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarGenerator.swift; sourceTree = "<group>"; };
+		84DADA972CDE2663000C6A5B /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		84E9D4F82CC14997009C6EF0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -290,6 +294,8 @@
 				84496E162CBFF59700687F6E /* PressableButtonStyle.swift */,
 				84789D642CC79655009F1EE1 /* ErrorHandler.swift */,
 				84789D662CC79E16009F1EE1 /* MessagePayloadFactory.swift */,
+				84DADA952CDE20F8000C6A5B /* AvatarGenerator.swift */,
+				84DADA972CDE2663000C6A5B /* CachedAsyncImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -454,10 +460,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				84C145532CB6EA250000F109 /* UserDefaultsStorage.swift in Sources */,
+				84DADA962CDE20F8000C6A5B /* AvatarGenerator.swift in Sources */,
 				84C657A62CC68BF400767167 /* VizbeeXWrapper.swift in Sources */,
 				8456BB162CAC063400FFF5A5 /* VizbeeWrapper.swift in Sources */,
 				84789D652CC79655009F1EE1 /* ErrorHandler.swift in Sources */,
 				84496E142CBFA86D00687F6E /* MainViewModel.swift in Sources */,
+				84DADA982CDE2663000C6A5B /* CachedAsyncImage.swift in Sources */,
 				849CBD372CB81EA400E01240 /* JoinGameView.swift in Sources */,
 				84319E4A2CB80E0C00E3BC0E /* ConnectedView.swift in Sources */,
 				849CBD3B2CB81FCA00E01240 /* ConnectedViewModel.swift in Sources */,
@@ -647,7 +655,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Movidle/Movidle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Movidle/Preview Content\"";
 				DEVELOPMENT_TEAM = AYPSU46Q2X;
 				ENABLE_PREVIEWS = YES;
@@ -689,7 +697,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Movidle/Movidle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"Movidle/Preview Content\"";
 				DEVELOPMENT_TEAM = AYPSU46Q2X;
 				ENABLE_PREVIEWS = YES;

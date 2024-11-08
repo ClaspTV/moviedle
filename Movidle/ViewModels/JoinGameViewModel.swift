@@ -33,9 +33,11 @@ class JoinGameViewModel: ObservableObject {
     }
     
     func createMessageParams() -> [String: Any] {
+        let avatar = VizbeeXWrapper.shared.getUserAvatar()
         return [
             "msgType": MessageType.joinGame.rawValue,
-            "joinCode": "movidle-" + joinCode
+            "joinCode": "movidle-" + joinCode,
+            "userAvatar": avatar,
         ]
     }
     

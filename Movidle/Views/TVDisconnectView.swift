@@ -42,7 +42,6 @@ struct TVDisconnectView: View {
                 Button(action: {
                     viewModel.disconnectFromTV()
                     activeRoute = nil
-                    presentationMode.wrappedValue.dismiss()
                     }) {
                     Text(StaticText.disconnectBtn)
                         .font(.custom(Constants.fontFamily, size: Constants.primaryFontSize))
@@ -62,7 +61,6 @@ struct TVDisconnectView: View {
         .navigationBarHidden(true)
         .overlay(
             CustomBackButton(action: {
-                presentationMode.wrappedValue.dismiss()
                 activeRoute = nil
             })
             .padding(.leading, 16)

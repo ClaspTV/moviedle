@@ -53,9 +53,11 @@ class ConnectedViewModel: ObservableObject {
     }
     
     func createMessageParams() -> [String: Any]{
+        let avatar = VizbeeXWrapper.shared.getUserAvatar()
         return [
           "msgType": MessageType.joinGame.rawValue,
           "userId": UIDevice.current.identifierForVendor!.uuidString,
+          "userAvatar": avatar,
         ]
     }
     

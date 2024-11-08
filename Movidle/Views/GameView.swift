@@ -77,14 +77,14 @@ struct GameView: View {
                     Text(viewModel.movieSubtitle)
                         .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
                         .foregroundColor(Constants.primaryColor)
-                        .padding(.bottom, 40)
-                    Text("00:\(String(format: "%02d", viewModel.timeLeft))")
-                        .font(.custom(Constants.fontFamily, size: Constants.titleFontSize))
-                        .foregroundColor(Constants.primaryColor)
-                    Text(StaticText.timeLeft)
-                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
-                        .foregroundColor(Constants.primaryColor)
-                        .padding(.bottom, 40)
+                        .padding(.bottom, 80)
+//                    Text("00:\(String(format: "%02d", viewModel.timeLeft))")
+//                        .font(.custom(Constants.fontFamily, size: Constants.titleFontSize))
+//                        .foregroundColor(Constants.primaryColor)
+//                    Text(StaticText.timeLeft)
+//                        .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+//                        .foregroundColor(Constants.primaryColor)
+//                        .padding(.bottom, 40)
                     if(viewModel.guessRightAnswerForMovieNumber != nil){
                         Text(StaticText.guessRight)
                             .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
@@ -145,7 +145,17 @@ struct GameView: View {
                                     VStack(spacing: 1) {
                                         ForEach(viewModel.sortedPlayerScores.indices, id: \.self) { index in
                                             HStack {
-                                                Text("\(index + 1).   \(viewModel.sortedPlayerScores[index].name)")
+                                                Text("\(index + 1).")
+                                                    .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
+                                                    .foregroundColor(Constants.secondaryColor)
+                                                
+                                                // Avatar Image
+                                                CachedAsyncImage(url: viewModel.sortedPlayerScores[index].avatar)
+                                                    .frame(width: 30, height: 30)
+                                                    .clipShape(Circle())
+                                                    .background(Circle().fill(Color.gray.opacity(0.2)))
+                                                
+                                                Text(viewModel.sortedPlayerScores[index].name)
                                                     .font(.custom(Constants.fontFamily, size: Constants.secondaryFontSize))
                                                     .foregroundColor(Constants.secondaryColor)
                                                 Spacer()
